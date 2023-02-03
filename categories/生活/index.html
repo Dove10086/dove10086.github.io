@@ -389,20 +389,20 @@
                 
                 
                 
-                <a href="/categories/%E6%B8%B8%E6%88%8F/" title="游戏: 1">
+                <a href="/categories/%E7%94%9F%E6%B4%BB/" title="生活: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">游戏
-                        <span class="tag-length">1</span>
+                             chip-active "
+                            style="background-color: #F9EBEA;">生活
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E7%94%9F%E6%B4%BB/" title="生活: 2">
+                <a href="/categories/%E6%B8%B8%E6%88%8F/" title="游戏: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F5EEF8;">生活
-                        <span class="tag-length">2</span>
+                             chip-default "
+                            style="background-color: #F5EEF8;">游戏
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -789,6 +789,14 @@ $(function () {
 
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="👀鸽子飞到哪儿了",clearTimeout(st)):(document.title="😘原来再这儿啊",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
     
 
 </body>

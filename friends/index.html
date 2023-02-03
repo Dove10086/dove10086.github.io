@@ -877,6 +877,14 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="👀鸽子飞到哪儿了",clearTimeout(st)):(document.title="😘原来再这儿啊",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
+    
+
 </body>
 
 </html>

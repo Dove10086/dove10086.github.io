@@ -613,7 +613,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"游戏","value":1},{"name":"生活","value":2}],
+                data: [{"name":"生活","value":2},{"name":"游戏","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -637,7 +637,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["CSGO","摄影","常识"]
+                data: ["摄影","常识","CSGO"]
             }
         ],
         yAxis: [
@@ -768,12 +768,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/CSGO/">
-                <span class="chip center-align waves-effect waves-light chip-default">CSGO</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E6%91%84%E5%BD%B1/">
                 <span class="chip center-align waves-effect waves-light chip-default">摄影</span>
             </a>
@@ -782,6 +776,12 @@
             
             <a href="/tags/%E5%B8%B8%E8%AF%86/">
                 <span class="chip center-align waves-effect waves-light chip-default">常识</span>
+            </a>
+            
+            
+            
+            <a href="/tags/CSGO/">
+                <span class="chip center-align waves-effect waves-light chip-default">CSGO</span>
             </a>
             
             
@@ -1115,6 +1115,14 @@ $(function () {
 
     
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script type="text/javascript">
+        var OriginTitile=document.title,st;
+        document.addEventListener("visibilitychange",function(){
+            document.hidden?(document.title="👀鸽子飞到哪儿了",clearTimeout(st)):(document.title="😘原来再这儿啊",st=setTimeout(function(){document.title=OriginTitile},3e3))
+        })
+    </script>
     
 
 </body>
