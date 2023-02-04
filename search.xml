@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>Markdown文件的基本语法二</title>
+      <link href="/2023/02/04/Markdown2/"/>
+      <url>/2023/02/04/Markdown2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Mardown强调语法"><a href="#Mardown强调语法" class="headerlink" title="Mardown强调语法"></a>Mardown强调语法</h2><p>通过将文本设置为粗体或斜体来强调其<strong>重要性</strong></p><h3 id="粗体-Bold"><a href="#粗体-Bold" class="headerlink" title="粗体(Bold)"></a>粗体(Bold)</h3><p>将文本变粗可以在变粗的单词或者短语前后各添加两个星号如下<br><code>**Bold**</code><br>效果<strong>Bold</strong><br>还可以添加下划线<br><code>__bold__</code><br>效果 <strong>bold</strong><br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p><h3 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h3><p>要使用斜体文本，可以在单词或者短语前后各添加一个星号与下划线具体使用方法与粗体类似<br><code>*ltalic*</code><br><em>ltalic</em><br>突出某个单词或字母可以如下,中间不要带空格。<br><code>*wh*at</code><br><em>wh</em>at</p><h3 id="同时使用粗体和斜体"><a href="#同时使用粗体和斜体" class="headerlink" title="同时使用粗体和斜体"></a>同时使用粗体和斜体</h3><p>想要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br><code>Where do you want to ***eat*** today</code><br>Where do you want to <em><strong>eat</strong></em> today</p><h2 id="Markdown-引用语法"><a href="#Markdown-引用语法" class="headerlink" title="Markdown 引用语法"></a>Markdown 引用语法</h2><p>要创建块引用，请在段落前添加一个 &gt; 符号。</p><pre><code>&gt;Dorothy followed her through many of the   beautiful rooms in her castle.</code></pre><p>渲染效果如下所示</p><blockquote><p>Dorothy followed her through many of the   beautiful rooms in her castle</p></blockquote><h3 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h3><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p><pre><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</code></pre><p>显示为</p><blockquote><p>Dorothy followed her through many of the beautiful rooms in her castle.</p><p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.<br>如果想要嵌套引用可以在加一个&gt;</p></blockquote><pre><code>&gt;我很好&gt;&gt;你还好吗</code></pre><blockquote><p>我很好</p><blockquote><p>你还好吗</p></blockquote></blockquote><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有些时候我们不得不需要排序列表要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p><pre><code>1. one2. two3. three4. four</code></pre><ol><li>one</li><li>two</li><li>three</li><li>four</li></ol><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p><hr><p>如实在忘记了怎么使用可以参考以下文章</p><blockquote><p><em><strong><a href="https://markdown.com.cn/basic-syntax/">https://markdown.com.cn/basic-syntax/</a></strong></em></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于冷水澡</title>
       <link href="/2023/02/02/shenghuo/"/>
       <url>/2023/02/02/shenghuo/</url>
