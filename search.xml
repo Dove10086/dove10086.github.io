@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>C语言的那些事</title>
+      <link href="/2023/02/09/c1/"/>
+      <url>/2023/02/09/c1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在学习C语言所遇到的有趣的事情"><a href="#在学习C语言所遇到的有趣的事情" class="headerlink" title="在学习C语言所遇到的有趣的事情"></a>在学习C语言所遇到的有趣的事情</h2><h3 id="1-近视眼的程序员"><a href="#1-近视眼的程序员" class="headerlink" title="1.近视眼的程序员"></a>1.近视眼的程序员</h3><p>有这么一个故事在一家公司中有一个程序员他在编写代码的过程中代码活了过来，其中有一个叫做<code>mian</code>的代码问程序员我是谁？<br>程序员自信的说简单你不是主函数吗所有代码的入口<br>mian又说你在仔细看看。程序员心中纳闷这不就是主函数吗之后戴上旁边的眼睛看了一眼惊呼<em>WC</em>你谁我的main函数呢<strong>注（main又叫主函数是所有程序的入口)</strong><br>在第一次编写程序的时候每个人肯定都犯过看错或者打错字母符号但是自己看不出来一运行就到处报红</p><pre><code>#include&lt;stdio.h&gt;int mian(viod)&#123;    printf(&quot;hello word&quot;)；    retrun 0;&#125;</code></pre><p>相比各位已经很熟这位老朋友了但是你可以看出这位老朋友的身上有几处错误吗？<br>我来揭晓答案吧总共三处错误<br>1.第二行的<code>main</code>函数错了我把它的<code>i</code>和<code>a</code>调换了位置变成了<code>mian</code><br>2.（）中的<code>void</code>我把它拼成了viod。<br>3.第四行的分号我用的是汉语分号。我相信各位聪明的读者早已经看出来错误了但是即使看出了错误和不会在犯这个错误是两码事我依然可以看到有许多的新手会犯这个错误而且这种错误排查起来往往很麻烦需要耗费很多没必要的精力，想要解决的话只能多练多记多打多注意自己打出来的和自己想出来的是不是一致。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> C语言 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客出现错误的一些解决方法</title>
       <link href="/2023/02/06/wrong/"/>
       <url>/2023/02/06/wrong/</url>
