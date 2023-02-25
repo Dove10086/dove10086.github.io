@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Python笔记壹</title>
+      <link href="/2023/02/25/py1/"/>
+      <url>/2023/02/25/py1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><img src="/2023/02/25/py1/py1%5C1.png"></p><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>论过程还是结果</title>
       <link href="/2023/02/21/ger/"/>
       <url>/2023/02/21/ger/</url>
