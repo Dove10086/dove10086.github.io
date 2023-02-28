@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Python笔记壹</title>
+      <title>Python笔记·壹</title>
       <link href="/2023/02/25/py1/"/>
       <url>/2023/02/25/py1/</url>
       
-        <content type="html"><![CDATA[<h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><br><img src="/2023/02/25/py1/1.png"></p><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><br><img src="/2023/02/25/py1/1.png"></p><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p><h2 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h2><p>randint函数<br>用法</p><pre><code>random.randint(1,10)//含义随机在1—10中选择数字</code></pre><h2 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h2><p>import 引用模块<br>语法</p><pre><code>import + 模块名称</code></pre>]]></content>
       
       
       <categories>
@@ -56,7 +56,7 @@
     
     
     <entry>
-      <title>关于MySQL贰</title>
+      <title>关于MySQL·贰</title>
       <link href="/2023/02/20/MySQL2/"/>
       <url>/2023/02/20/MySQL2/</url>
       
@@ -83,7 +83,7 @@
     
     
     <entry>
-      <title>关于MySQL叁</title>
+      <title>关于MySQL·叁</title>
       <link href="/2023/02/20/mysql3/"/>
       <url>/2023/02/20/mysql3/</url>
       
@@ -110,11 +110,11 @@
     
     
     <entry>
-      <title>关于MySQL壹</title>
+      <title>关于MySQL·壹</title>
       <link href="/2023/02/12/kaix/"/>
       <url>/2023/02/12/kaix/</url>
       
-        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><pre><code>MySQL数据库的四大特点</code></pre><p>1.整理数据<br>2.数据更新<br>3.插入数据<br>4.删除数据</p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><h3 id="插入数据-insert"><a href="#插入数据-insert" class="headerlink" title="插入数据 (insert)"></a>插入数据 <strong>(insert)</strong></h3><h3 id="数据更新-update"><a href="#数据更新-update" class="headerlink" title="数据更新 (update)"></a>数据更新 <strong>(update)</strong></h3><h3 id="数据删除-delete"><a href="#数据删除-delete" class="headerlink" title="数据删除 (delete)"></a>数据删除 <strong>(delete)</strong></h3><h3 id="数据选择-select"><a href="#数据选择-select" class="headerlink" title="数据选择 (select)"></a>数据选择 <strong>(select)</strong></h3><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p> <strong>show</strong> (展示)<br> <strong>databasaes</strong> (数据库)<br> <strong>show databases</strong> (含义展示所有数据库)</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><pre><code>MySQL数据库的三大特点</code></pre><p>1.数据独立性，拓展性<br>2.插入数据<br>3.删除数据</p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><h3 id="插入数据-insert"><a href="#插入数据-insert" class="headerlink" title="插入数据 (insert)"></a>插入数据 <strong>(insert)</strong></h3><h3 id="数据更新-update"><a href="#数据更新-update" class="headerlink" title="数据更新 (update)"></a>数据更新 <strong>(update)</strong></h3><h3 id="数据删除-delete"><a href="#数据删除-delete" class="headerlink" title="数据删除 (delete)"></a>数据删除 <strong>(delete)</strong></h3><h3 id="数据选择-select"><a href="#数据选择-select" class="headerlink" title="数据选择 (select)"></a>数据选择 <strong>(select)</strong></h3><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p> <strong>show</strong> (展示)<br> <strong>databasaes</strong> (数据库)<br> <strong>show databases</strong> (含义展示所有数据库)</p>]]></content>
       
       
       <categories>
@@ -218,7 +218,7 @@
     
     
     <entry>
-      <title>Markdown文件的基本语法二</title>
+      <title>Markdown文件的基本语法·二</title>
       <link href="/2023/02/04/Markdown2/"/>
       <url>/2023/02/04/Markdown2/</url>
       
@@ -245,7 +245,7 @@
     
     
     <entry>
-      <title>Markdown文件的基本语法一</title>
+      <title>Markdown文件的基本语法·一</title>
       <link href="/2023/02/03/Markdown1/"/>
       <url>/2023/02/03/Markdown1/</url>
       
