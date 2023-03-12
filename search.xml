@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Python·贰</title>
+      <link href="/2023/03/12/py2/"/>
+      <url>/2023/03/12/py2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python中的算法表达式"><a href="#Python中的算法表达式" class="headerlink" title="Python中的算法表达式"></a>Python中的算法表达式</h2><ol><li>‘&#x2F;‘号<br> 语法<pre><code>1.3 / 2</code></pre> 含义3除以2,结果1.5</li><li>‘&#x2F;&#x2F;‘号<pre><code>语法3 // 2</code></pre> 含义<br> 3除2取小于被除数的最大整数（也叫地板除），</li></ol><h2 id="Python中的内置函数-BIF"><a href="#Python中的内置函数-BIF" class="headerlink" title="Python中的内置函数(BIF)"></a>Python中的内置函数(BIF)</h2><ol><li>divmod(A,B)<br>同时求出两(A,B)地板除结果和余数的值<br>语法:<pre><code>divmod(3,2)答案（1,1）</code></pre></li><li>abs(x)<br>x的绝对值</li><li>int(x)<br>含义将x转换为整数</li><li>float(3.14)<br>将3.14转换成浮点型</li><li>complex(re,im)<br>返回一个复数,re是实部，im是虚部</li><li>pow(x,y)<br>计算x的y次方</li><li>x ** y<br>计算x的y次幂</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于MySQL~2</title>
       <link href="/2023/03/08/sql4/"/>
       <url>/2023/03/08/sql4/</url>
