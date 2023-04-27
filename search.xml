@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>关于MySQL语法总结</title>
+      <link href="/2023/04/20/sql11/"/>
+      <url>/2023/04/20/sql11/</url>
+      
+        <content type="html"><![CDATA[<h2 id="inster-语句"><a href="#inster-语句" class="headerlink" title="inster 语句"></a>inster 语句</h2><h3 id="在数据表中插入数据"><a href="#在数据表中插入数据" class="headerlink" title="在数据表中插入数据"></a>在数据表中插入数据</h3><pre class=" language-mysql"><code class="language-mysql">Insert  into  student  values("蔡徐坤",“250”,“59”)；</code></pre><h2 id="show语句"><a href="#show语句" class="headerlink" title="show语句"></a>show语句</h2><h3 id="查询字段"><a href="#查询字段" class="headerlink" title="查询字段"></a>查询字段</h3><pre class=" language-mysql"><code class="language-mysql">select * from + 数据表;//查询所有字段select 要查询的内容 from + 数据表;//查询指定字段</code></pre><h2 id="create语句"><a href="#create语句" class="headerlink" title="create语句"></a>create语句</h2><h3 id="创建一个库"><a href="#创建一个库" class="headerlink" title="创建一个库"></a>创建一个库</h3><pre class=" language-mysql"><code class="language-mysql">create database database_name</code></pre><h3 id="创建一个表"><a href="#创建一个表" class="headerlink" title="创建一个表"></a>创建一个表</h3><pre class=" language-mysql"><code class="language-mysql">create table table_name(字段,字段类型···);</code></pre><h3 id="先判断数据库存在吗-不存在再创建数据库"><a href="#先判断数据库存在吗-不存在再创建数据库" class="headerlink" title="先判断数据库存在吗 不存在再创建数据库"></a>先判断数据库存在吗 不存在再创建数据库</h3><pre class=" language-mysql"><code class="language-mysql">create database if not exists database_name;</code></pre><h3 id="创建一个数据库的时候并且字符集设置为GBK"><a href="#创建一个数据库的时候并且字符集设置为GBK" class="headerlink" title="创建一个数据库的时候并且字符集设置为GBK"></a>创建一个数据库的时候并且字符集设置为GBK</h3><pre class=" language-mysql"><code class="language-mysql">create database database_name character set GBK;</code></pre><h2 id="alter语句-update-修改的是字段"><a href="#alter语句-update-修改的是字段" class="headerlink" title="alter语句(update:修改的是字段)"></a>alter语句(update:修改的是字段)</h2><pre><code>alter修改的是数据库、数据表 </code></pre><h3 id="表修改字符集"><a href="#表修改字符集" class="headerlink" title="表修改字符集"></a>表修改字符集</h3><pre class=" language-mysql"><code class="language-mysql">    alter database database_name character set UTF-8;</code></pre><h3 id="表增加字段"><a href="#表增加字段" class="headerlink" title="表增加字段"></a>表增加字段</h3><pre class=" language-mysql"><code class="language-mysql">    alter table table_name add 字段 + 字段数据类型;</code></pre><h3 id="删除表中的一列"><a href="#删除表中的一列" class="headerlink" title="删除表中的一列"></a>删除表中的一列</h3><pre class=" language-mysql"><code class="language-mysql">alter table table_name drop 删除的字段;</code></pre><h2 id="update语句"><a href="#update语句" class="headerlink" title="update语句"></a>update语句</h2><h2 id="主键约束"><a href="#主键约束" class="headerlink" title="主键约束"></a>主键约束</h2><h3 id="创建主键primary-key"><a href="#创建主键primary-key" class="headerlink" title="创建主键primary key"></a>创建主键primary key</h3><p>语法</p><pre><code>create table table_name (id int primary key,name varchar);</code></pre><h3 id="增加主键"><a href="#增加主键" class="headerlink" title="增加主键"></a>增加主键</h3><p>语法</p><pre><code>alter table_name modify id int primary key;</code></pre><h3 id="删除主键"><a href="#删除主键" class="headerlink" title="删除主键"></a>删除主键</h3><p>语法</p><pre><code>alter table_name drop primary key;</code></pre><h2 id="外键约束"><a href="#外键约束" class="headerlink" title="外键约束"></a>外键约束</h2><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="use"><a href="#use" class="headerlink" title="use"></a>use</h3><pre><code>use database_name;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL3</title>
+      <link href="/2023/04/17/sql3/"/>
+      <url>/2023/04/17/sql3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="定点数-decimal"><a href="#定点数-decimal" class="headerlink" title="定点数 decimal"></a>定点数 decimal</h2><p>定点数 decimal(x,y)<br>x:小数的长度<br>y：小数点后精确几位</p><h2 id="日期时间"><a href="#日期时间" class="headerlink" title="日期时间"></a>日期时间</h2><h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><p>Date:YYYY-MM-DD 年-月-日</p><h3 id="time"><a href="#time" class="headerlink" title="time"></a>time</h3><p>time: hh:mm:ss 小时:分钟:秒</p><h2 id="DESC-表名"><a href="#DESC-表名" class="headerlink" title="DESC+表名"></a>DESC+表名</h2><p>查看表结构的语句<br>语法</p><pre class=" language-Mysql"><code class="language-Mysql">desc + 表名;</code></pre><h2 id="表的更新"><a href="#表的更新" class="headerlink" title="表的更新"></a>表的更新</h2><p>语法</p><pre><code>alter table 旧表名 rename [to]新表名;</code></pre><p>其中re是重新的意思<br>to是可选的意思</p><h3 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h3><p>MySQL模糊查询是用来查找数据库中与指定模式相匹配的字符串的语句。模糊查询语句使用LIKE操作符与通配符（wildcards）一起使用。</p><p>以下是MySQL模糊查询所使用的通配符：</p><ul><li>%表示任意长度的字符串（包括空字符串）；</li><li>_表示任意单个字符。</li></ul><p>语法格式如下：</p><pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> table_name <span class="token keyword">WHERE</span> column_name <span class="token operator">LIKE</span> pattern<span class="token punctuation">;</span></code></pre><p>示例：</p><pre class=" language-sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> employees <span class="token keyword">WHERE</span> last_name <span class="token operator">LIKE</span> <span class="token string">'B%'</span><span class="token punctuation">;</span></code></pre><p>该语句将从employees表中选择所有姓以“B”字母开头的员工信息。</p><p>更多示例：</p><pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">-- 选择所有名称以“a”结尾的员工信息</span><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> employees <span class="token keyword">WHERE</span> last_name <span class="token operator">LIKE</span> <span class="token string">'%a'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">-- 选择所有名称以“S”字母开头并且长度为5的员工信息</span><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> employees <span class="token keyword">WHERE</span> last_name <span class="token operator">LIKE</span> <span class="token string">'S____'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">-- 选择所有名称中包含“mack”的员工信息</span><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> employees <span class="token keyword">WHERE</span> last_name <span class="token operator">LIKE</span> <span class="token string">'%mack%'</span><span class="token punctuation">;</span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我人生中的第一台单反所拍出的作品</title>
+      <link href="/2023/04/14/sheying2/"/>
+      <url>/2023/04/14/sheying2/</url>
+      
+        <content type="html"><![CDATA[<p>我人生中的第一台单反尼康D3200所拍摄的作品<br><img src="/2023/04/14/sheying2/1.jpg"><br><img src="/2023/04/14/sheying2/2.jpg"><br><img src="/2023/04/14/sheying2/3.jpg"><br><img src="/2023/04/14/sheying2/4.jpg"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>名言</title>
+      <link href="/2023/04/11/mr/"/>
+      <url>/2023/04/11/mr/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>无论你手上用的是哪一台相机，我都由衷的建议你走出去，去看看这个美丽的世界，欣赏久未凝视过的日出和日落，还有城市里难能一见的满天星辰，灿烂星河，按下快门,去拍下你眼中看到的曼妙风景，去记录你所在乎的人和事。只有这样，相机的参数才被赋予了真正的意义。 ——Links</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>铃芽之旅</title>
+      <link href="/2023/04/05/lyzl/"/>
+      <url>/2023/04/05/lyzl/</url>
+      
+        <content type="html"><![CDATA[<p>从2013年接触新海诚的《言叶之庭》到现在2023的《铃芽之旅》新海诚这三个字对我而言已经不再是一个人名而是一段美好的时光，在这个期间我看完他迄今为止的所有作品无不使我感动，这次的铃芽之旅虽然剧情线不是很突出但是也在稳定输出，而新海诚先生那令人惊叹的画工依然十分给力，非常感谢新海诚先生这10年来对我的陪伴使我度过一个美好的童年。——Dove<br><img src="/2023/04/05/lyzl/1.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 电影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于镜头和焦距</title>
+      <link href="/2023/04/03/jt/"/>
+      <url>/2023/04/03/jt/</url>
+      
+        <content type="html"><![CDATA[<p>镜头一般分为 超广角 广角中焦 长焦 超长焦</p><h2 id="超广角"><a href="#超广角" class="headerlink" title="超广角"></a>超广角</h2><p>一般我们将镜头焦距在24mm以下的镜头称为“超广角镜头”，这种镜头视角大，很适合拍摄大场景、风光类题材，营造出来的视觉冲击力很强。</p><h3 id="24mm和28mm"><a href="#24mm和28mm" class="headerlink" title="24mm和28mm"></a>24mm和28mm</h3><p>这两个焦距是非常标准的广角焦距，常用于拍摄风光题材。</p><h3 id="35mm"><a href="#35mm" class="headerlink" title="35mm"></a>35mm</h3><p>这个焦距被很多人称为“人文眼”，因为用它拍人文非常好。拍人文题材最主要的就是表现出人和背景的关系，35mm既能把背景拍下来，又能获得不错的景深。</p><h3 id="50mm"><a href="#50mm" class="headerlink" title="50mm"></a>50mm</h3><p>被大家称为“标头”，拍人像、拍人文都是很不错的。很多人要么用35mm、要么用50mm，我个人认为两个中用好一个就行。</p><h3 id="85mm"><a href="#85mm" class="headerlink" title="85mm"></a>85mm</h3><p>这个焦段非常适合拍摄人像，如果你喜欢拍人像，那85mm是你的不二选择。这焦段能很好的虚幻背景，还有很好的画面裁切能力。</p><p>标准变焦镜头（表头）<br>标准变焦镜头就是24mm或者28mm起，到70mm、85mm或者120mm结束的镜头。这种镜头就是日常挂机的镜头，适合拍摄很多题材。如果你只是个非常普通的摄影爱好者，没什么要求，有什么拍什么，那么这个焦距就适合你了。</p><h3 id="100mm"><a href="#100mm" class="headerlink" title="100mm"></a>100mm</h3><p>这个焦距基本上都是微距镜头，自然用来微距摄影是最好的。</p><h3 id="135mm"><a href="#135mm" class="headerlink" title="135mm"></a>135mm</h3><p>很多人都喜欢用135mm来拍摄人像，因为这个焦距拍摄人像也非常合适，大家在用135mm拍摄人像时，建议大家离模特远一点。</p><h3 id="200mm和300mm"><a href="#200mm和300mm" class="headerlink" title="200mm和300mm"></a>200mm和300mm</h3><p>这焦段就是长焦了，可以拿着拍人像题材、运动题材之类的；也可以拿着打鸟，只是要打那种离得不远的鸟。另外，也有人拿着拍人像，因为虚幻效果好。</p><h2 id="超长焦"><a href="#超长焦" class="headerlink" title="超长焦"></a>超长焦</h2><p>一般我们焦距在300mm以上的镜头称为超长焦镜头，超长焦镜头很适合拍摄野生动物、月亮、日出之类的。</p><h2 id="焦段越小拍摄范围越广"><a href="#焦段越小拍摄范围越广" class="headerlink" title="焦段越小拍摄范围越广"></a>焦段越小拍摄范围越广</h2><p>鱼眼（＜12mm）:比广角更广，视野接近180°，畸变为近乎圆形的效果</p><p>广角（12mm-35mm） :适合于场面宏大、交代大环境的时候。拍摄特写有畸变，可用于展现人物所处环境的特殊以及表现人物细节和环境的关</p><p>中焦（35mm-85mm）：拍摄人物近景、中景面部，展现主体行为在观察者眼中的样子。其中50mm为俗称的“标准头”，是最接近人眼感觉的镜头</p><p>长焦（＞85mm）:用于拍摄大特写，拥有更大的景深，有魅力，有神秘感</p><p>超长焦&#x2F;微距：细小、微小的生物，对于对焦的要求很高。如拍摄珠宝、昆虫等</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>给李老师的一封信</title>
+      <link href="/2023/04/01/xin/"/>
+      <url>/2023/04/01/xin/</url>
+      
+        <content type="html"><![CDATA[<p>​敬爱的李老师您好，在初中毕业已经过去了两年多了虽然时光飞逝但是每当回想起来还是十分怀念，如今的您还好吗？<br>2021年6月11日下午第二节课间在您的办公室里您过我一句话“你这个专业可以干什么呢”这句话在我的内心如同一滴清水在我浑浊的内心掀起波澜，我不禁扪心自问“对啊可以干什么呢?”虽然学习了一些东西但是这些东西有哪些可以帮助我呢？有哪些又是我真正需要的呢？这时我发现了我的真我，他很幼稚像一个还未开化的小孩一样只是学会了咿呀学语，连简单的说出自己的话都说不出口，那时我不禁为自己的真我而感到羞愧，为此我之后的两年学习中不断的找寻方向，在一个暑假中我找到了比较适合自己的方向并且向着这个方向不断前进如今我已经前进了两年多，我感觉我的方向开始逐渐明确，并且顺着这个方向结识了许多志同道合的朋友与老师他们帮助了我很多我也很感谢他们。<br>​今年我就步入了成年人的行列这是一种成长无论是我还是“我”，我知道未来会有许多困境但是我相信这时绝对挡不住有方向的我的我坚信着从始至终，也许这封信您永远都不会看到.<br>But remember</p><blockquote><p><strong>在您教的众多学生中有一个学生会一直感恩您因为您是他心目中的司南在心中指引方向。</strong> </p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于主键</title>
+      <link href="/2023/03/29/zj/"/>
+      <url>/2023/03/29/zj/</url>
+      
+        <content type="html"><![CDATA[<h2 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>主键(Primary key)是唯一标识列<br>当作表的行的惟一标识的候选关键字。一个表只有一个主关键字。主关键字又可以称为主键。主键可以由一个字段，也可以由多个字段组成，分别成为单字段主键或多字段主键</p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol><li>保证实体的完整性;</li><li>加快数据库的操作速度</li><li>在表中添加新记录时，ACCESS会自动检查新记录的主键值，不允许该值与其他记录的主键值重复。</li><li>ACCESS自动按主键值的顺序显示表中的记录。如果没有定义主键，则按输入记录的顺序显示表中的记录。</li></ol><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol><li><p>每一个表只能有一个主键，主键的值不能出现重复</p></li><li><p><strong>主键不能为空即(NULL)</strong> ！！！</p></li><li><p>提高查询速度</p><blockquote><p>提示：虽然并不总是需要主键，但是多数数据库设计者都会保证他们创建的每个表具有一个主键，以便以后的数据库的操作和管理</p></blockquote></li></ol><h3 id="主键优化查询速度的原理（递归）"><a href="#主键优化查询速度的原理（递归）" class="headerlink" title="主键优化查询速度的原理（递归）"></a>主键优化查询速度的原理（递归）</h3><p>相比学过C语言的都知道有一种算法叫做<strong>递归</strong>即将一个大的问题分成许多小问题使用同一种方法来进行解决使用官方一点的话来讲的话就是<strong>把一个大型复杂问题层层转化为一个与原问题规模更小的问题，问题被拆解成子问题后，递归调用继续进行，直到子问题无需进一步递归就可以解决的地步为止</strong>。</p><h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a><strong>举个例子</strong></h4><p>现在你有一个数据库表，表里面有1000条数据其中让你快速找到数字234你要怎么做</p><p>如果使用select查询就是从1-1000慢慢查询这样太过笨重了</p><p>但是如果用递归来解决就是先取1-1000中间的数值500来与要查询的数字234来对比</p><p>500大于234那么再取1-500中间的数值250来与234来比对</p><p>结果小于250那么再选1-250的中间数来与234来比对直到找到正确的数字</p><p>这样做的结果就是每一次判断都会自动减少一半的无用信息从而提高查询速度</p><h3 id="优化数据库查询的方法"><a href="#优化数据库查询的方法" class="headerlink" title="优化数据库查询的方法"></a>优化数据库查询的方法</h3><p><em><strong>1.减少使用外键</strong></em><br><em><strong>2.少用星号查询</strong></em><br><em><strong>3.建立引索</strong></em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>色彩搭配</title>
+      <link href="/2023/03/27/secai/"/>
+      <url>/2023/03/27/secai/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我在家中进行桌面改造的时候发现色彩对人心理的影响是巨大的于是我专门收集了一部分资料希望可以帮助到你们</p><h2 id="深浅搭配（明暗搭配）"><a href="#深浅搭配（明暗搭配）" class="headerlink" title="深浅搭配（明暗搭配）"></a>深浅搭配（明暗搭配）</h2><p>在搭配过程中如果都是深色会让人感到闷的慌但是如果都是明色则突出不了重点，这时你就可以中和一下选择比如以深色为主色以明色为副色或者点缀这样既可以突出对象同时也可以使其看起来没有这么花哨</p><h2 id="冷暖平衡"><a href="#冷暖平衡" class="headerlink" title="冷暖平衡"></a>冷暖平衡</h2><p>人也是动物太冷或者太热都受不了<br>如果一个图片太冷了不妨来点暖色来暖和暖和</p><h2 id="互补色平衡"><a href="#互补色平衡" class="headerlink" title="互补色平衡"></a>互补色平衡</h2><p>也叫对比色平衡<br>即先确定一个主色然后这个颜色在色环上旋转180°就是互补色<br>而120°到180°之间则是对比色<br>当然这也是有前提的要在面积上有区分，如果面积相近要用其他的方式来平衡，比如无彩色系列等</p><h2 id="有无彩色平衡"><a href="#有无彩色平衡" class="headerlink" title="有无彩色平衡"></a>有无彩色平衡</h2><p>有彩色则是在色环上的所有颜色<br>而无色彩则是指黑白灰<br>如果一个图片上色彩太过饱满则显得太花哨<br>如果黑白又会使人看起来感觉无聊<br>这时我们不妨中和一下以黑白为底色以有彩色为副色这样看起来不光没有这么轻浮同时也可以突出重点</p><blockquote><p>相关视频链接坐标 <a href="https://www.bilibili.com/video/BV1xG411E7fw/?share_source=copy_web&vd_source=f0c7a3a3e01e92749c75ee51207c6de2">快点我</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 色彩搭配 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 色彩 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>随记</title>
+      <link href="/2023/03/23/sheyingtow/"/>
+      <url>/2023/03/23/sheyingtow/</url>
+      
+        <content type="html"><![CDATA[<h2 id="拍摄场地《山东儒源文化集团人才培养基地跳蚤市场》"><a href="#拍摄场地《山东儒源文化集团人才培养基地跳蚤市场》" class="headerlink" title="拍摄场地《山东儒源文化集团人才培养基地跳蚤市场》"></a>拍摄场地《山东儒源文化集团人才培养基地跳蚤市场》</h2><h3 id="拍摄作品"><a href="#拍摄作品" class="headerlink" title="拍摄作品"></a>拍摄作品</h3><p><img src="/2023/03/23/sheyingtow/1.jpg" alt="1"></p><p><img src="/2023/03/23/sheyingtow/2.jpg" alt="2"></p><p><img src="/2023/03/23/sheyingtow/3.jpg" alt="3"></p><p><img src="/2023/03/23/sheyingtow/4.jpg" alt="4"></p><p><img src="/2023/03/23/sheyingtow/5.jpg" alt="5"></p><p><img src="/2023/03/23/sheyingtow/6.jpg" alt="6"></p><p><img src="/2023/03/23/sheyingtow/7.jpg" alt="7"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于SQL注入</title>
+      <link href="/2023/03/21/sql/"/>
+      <url>/2023/03/21/sql/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是SQL注入"><a href="#什么是SQL注入" class="headerlink" title="什么是SQL注入"></a>什么是SQL注入</h2><p>SQL注入攻击是一种常见的攻击方式，攻击者通过构造特殊的输入来绕过应用程序的安全验证机制，从而达到获取或修改应用程序数据的目的。SQL注入攻击通常发生在Web应用开发中，但也可能发生在其他类型的应用中。</p><p>下面介绍几种常见的SQL注入攻击方式：</p><h2 id="1-基于错误的SQL注入攻击"><a href="#1-基于错误的SQL注入攻击" class="headerlink" title="1. 基于错误的SQL注入攻击"></a>1. 基于错误的SQL注入攻击</h2><p>攻击者通过构造恶意的SQL语句，让应用程序抛出错误，从而获取敏感信息。例如：</p><p>假设有一个用户登录的功能，输入用户名和密码，如果用户名和密码正确，则可以登录成功。攻击者通过构造以下恶意输入：</p><p>用户名：’ or 1&#x3D;1-</p><p>密码：’ or 1&#x3D;1-</p><p>这样，应用程序构造的SQL语句就变成了：</p><p>SELECT * FROM users WHERE username&#x3D;’’ or 1&#x3D;1- AND password&#x3D;’’ or 1&#x3D;1-</p><p>这个语句在执行的时候会抛出错误，但是攻击者已经成功地绕过了身份验证。</p><h2 id="2-基于联合查询的SQL注入攻击"><a href="#2-基于联合查询的SQL注入攻击" class="headerlink" title="2. 基于联合查询的SQL注入攻击"></a>2. 基于联合查询的SQL注入攻击</h2><p>攻击者可以利用UNION关键字构造恶意的SQL语句，从而查询到不属于自己的数据。例如：</p><p>假设有一个查询文章的功能，攻击者通过构造以下恶意输入：</p><p>文章ID：1 UNION SELECT username, password FROM users–</p><p>这样，应用程序构造的SQL语句就变成了：</p><p>SELECT * FROM articles WHERE id&#x3D;1 UNION SELECT username, password FROM users–</p><p>这个语句会将原本查询文章的结果集和用户表的查询结果集合并，从而获取到了用户表的数据。</p><h2 id="3-基于时间盲注的SQL注入攻击"><a href="#3-基于时间盲注的SQL注入攻击" class="headerlink" title="3. 基于时间盲注的SQL注入攻击"></a>3. 基于时间盲注的SQL注入攻击</h2><p>攻击者可以利用程序执行的时间来判断是否执行了恶意的SQL语句。例如：</p><p>假设有一个查询页面的功能，攻击者通过构造以下恶意输入：</p><p>查询条件：’; WAITFOR DELAY ‘0:0:10’-</p><p>这样，应用程序构造的SQL语句就是：</p><p>SELECT * FROM articles WHERE title&#x3D;’’”; WAITFOR DELAY ‘0:0:10’–’</p><p>这个语句会在执行的时候等待10秒钟才返回结果。攻击者可以利用程序的响应时间来判断是否执行了恶意的SQL语句。如果返回的速度比较慢，就说明执行了恶意的SQL语句。</p><h2 id="4-基于布尔盲注的SQL注入攻击"><a href="#4-基于布尔盲注的SQL注入攻击" class="headerlink" title="4. 基于布尔盲注的SQL注入攻击"></a>4. 基于布尔盲注的SQL注入攻击</h2><p>攻击者在构造恶意输入的时候，可以利用程序的返回值来猜测数据库中的数据。例如：</p><p>假设有一个查询页面的功能，攻击者通过构造以下恶意输入：</p><p>查询条件：’ or 1&#x3D;1–</p><p>这样，应用程序构造的SQL语句就是：</p><p>SELECT * FROM articles WHERE title&#x3D;’’ or 1&#x3D;1–’</p><p>这个语句会返回所有文章的结果，攻击者可以通过返回的结果来猜测数据库中的数据。如果返回结果中包含了敏感信息，就说明存在漏洞。</p><p>以上就是SQL注入攻击的几种常见方式，开发者需要加强对输入的验证，避免出现安全漏洞。</p><blockquote><p>相关资料来自OpenAI。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python的重要语法</title>
+      <link href="/2023/03/21/py3/"/>
+      <url>/2023/03/21/py3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="条件语句：if-elif-else"><a href="#条件语句：if-elif-else" class="headerlink" title="条件语句：if-elif-else"></a>条件语句：if-elif-else</h2><p>if-elif-else是一种流程控制语句，用于在程序中根据条件执行不同的代码块。它包含三个关键字：if、elif和else，可以根据需要重复使用elif来添加更多的条件。</p><p>它的语法结构如下：</p><pre><code>    if 条件1:        代码块1    elif 条件2:        代码块2    elif 条件3:        代码块3    ...    else:        代码块n</code></pre><p>如果条件1成立，执行代码块1；如果条件1不成立，而条件2成立，执行代码块2；如果条件1和条件2都不成立，而条件3成立，执行代码块3；如果所有条件都不成立，执行代码块n。</p><p>其中，elif 和 else 是可选的，但 if 是必须的。而且，elif 和 else 只能出现在一个 if 下面，不能单独使用。</p><p>以下是一个示例：</p><pre class=" language-python"><code class="language-python">score <span class="token operator">=</span> <span class="token number">85</span><span class="token keyword">if</span> score <span class="token operator">>=</span> <span class="token number">90</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"优秀"</span><span class="token punctuation">)</span><span class="token keyword">elif</span> score <span class="token operator">>=</span> <span class="token number">80</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"良好"</span><span class="token punctuation">)</span><span class="token keyword">elif</span> score <span class="token operator">>=</span> <span class="token number">70</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"中等"</span><span class="token punctuation">)</span><span class="token keyword">elif</span> score <span class="token operator">>=</span> <span class="token number">60</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"及格"</span><span class="token punctuation">)</span><span class="token keyword">else</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"不及格"</span><span class="token punctuation">)</span></code></pre><p>在这个例子中，如果分数大于等于90，将打印“优秀”，如果分数大于等于80且小于90，将打印“良好”，如果分数大于等于70且小于80，将打印“中等”，以此类推，直到打印“不及格”。</p><h2 id="循环语句：for和while"><a href="#循环语句：for和while" class="headerlink" title="循环语句：for和while"></a>循环语句：for和while</h2><p>for循环语句：</p><p>for循环语句是一种常用的循环语句，通常用于遍历一个数据集合或执行某个操作特定次数的情况，其语法为：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">for</span> 变量名 <span class="token keyword">in</span> 可迭代对象<span class="token punctuation">:</span>    <span class="token operator">&lt;</span>循环体<span class="token operator">></span></code></pre><p>其中，变量名是一个用于存放每次循环迭代值的变量，它将依次取值可迭代对象中的元素，并执行循环体中的语句。通常，可迭代对象一般是一个序列（如列表、字符串、元组等），但也可以是任何可迭代的对象（如生成器）。例如：</p><pre class=" language-python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token keyword">for</span> num <span class="token keyword">in</span> numbers<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span></code></pre><p>输出：</p><pre><code>12345</code></pre><p>while循环语句：</p><p>while循环语句是一个基本的循环语句，它的执行次数取决于循环条件是否成立，其语法为：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">while</span> 循环条件<span class="token punctuation">:</span>    <span class="token operator">&lt;</span>循环体<span class="token operator">></span></code></pre><p>在循环开始时，首先会检查循环条件是否为真，如果为真，则执行循环体中的语句，然后再重新检查循环条件是否为真，直到循环条件不成立为止。需要注意的是，如果循环条件一开始就不成立，则循环体将不会执行。例如：</p><pre class=" language-python"><code class="language-python">count <span class="token operator">=</span> <span class="token number">0</span><span class="token keyword">while</span> count <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>    count <span class="token operator">+=</span> <span class="token number">1</span></code></pre><p>输出：</p><pre><code>01234</code></pre><p>上面的代码使用 while 循环计数，循环变量 count 从 0 开始，每次执行循环体打印输出 count 的值，然后将 count 加 1，直到循环变量 count 的值大于或等于 5 时，循环结束。</p><h2 id="函数定义：def"><a href="#函数定义：def" class="headerlink" title="函数定义：def"></a>函数定义：def</h2><p>def</p><p>是 Python 中定义函数的关键字，用于定义一个新的函数，其语法格式为:</p><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>parameters<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token triple-quoted-string string">"""    Docstring - 对函数功能和用法的描述    """</span>    <span class="token comment" spellcheck="true"># 函数体 - 实现具体的功能</span>    <span class="token keyword">return</span> expression</code></pre><p>其中，<code>function_name</code> 是函数的名称，<code>parameters</code> 是函数的参数列表，<code>Docstring</code> 是用于描述函数功能和用法的字符串，<code>函数体</code> 是实现函数具体功能的代码，<code>return</code> 语句用于返回函数执行结果。</p><p>下面是一个简单的示例：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token triple-quoted-string string">"""    计算两个数的和    """</span>    result <span class="token operator">=</span> x <span class="token operator">+</span> y    <span class="token keyword">return</span> result</code></pre><p>定义好函数后，可以通过调用函数来执行它：</p><pre class=" language-python"><code class="language-python">sum <span class="token operator">=</span> add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 调用 add 函数，将返回值赋给 sum</span><span class="token keyword">print</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true"># 输出结果 3</span></code></pre><p>函数定义是 Python 编程中基础和重要的概念，合理使用函数可以提高代码复用性和可维护性。</p><h2 id="列表：list"><a href="#列表：list" class="headerlink" title="列表：list"></a>列表：list</h2><p>列表（list）是Python中一个非常常见的数据类型，它是一个有序、可变的序列。列表中的每一个元素可以是不同的数据类型，包括数字、字符串、布尔值、函数等。</p><p>列表可以通过中括号“[]”来定义，各个元素之间用逗号“,”隔开。例如：</p><pre class=" language-python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'apple'</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'name': 'Tom', 'age': 18&amp;#125;]</span></code></pre><p>上面的代码定义了一个包含五个元素的列表，其中第四个元素是一个列表，第五个元素是一个字典。可以通过索引来访问列表中的元素，索引从0开始。例如：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 输出：apple</span><span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 输出：b</span><span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 输出：Tom</span></code></pre><p>列表还支持常见的序列操作，如切片、插入元素、删除元素等，具体使用方法可以查阅Python文档或教程。</p><h2 id="字典：dictionary"><a href="#字典：dictionary" class="headerlink" title="字典：dictionary"></a>字典：dictionary</h2><p>一种存储键值对的数据结构，其中每个键都与一个值相对应。可以通过键来访问和修改其中的值。字典通常用来表示有标识符的数据集合，例如姓名和地址。在Python中，字典是一种内置类型，可以通过使用大括号{}来创建。例如：</p><pre class=" language-python"><code class="language-python">my_dict <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'name': 'Alice', 'age': 25, 'city': 'New York'&amp;#125;</span></code></pre><p>在此示例中，名称Alice被分配给键名’name’，年龄25被分配给键名’age’，城市’New York’被分配给键名’city’。要访问字典中的键值对，请使用该键名称作为索引。例如：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>my_dict<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># Output: 'Alice'</span></code></pre><p>要添加或修改键值对，只需为该键名称分配一个新值即可。例如：</p><pre class=" language-python"><code class="language-python">my_dict<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">26</span>my_dict<span class="token punctuation">[</span><span class="token string">'phone'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'123-456-7890'</span></code></pre><p>在此示例中，年龄被修改为26，并添加了新键名’phone’。</p><h2 id="元组：tuple"><a href="#元组：tuple" class="headerlink" title="元组：tuple"></a>元组：tuple</h2><p>元组是Python中的一种数据类型，用于存储多个值，通常用于存储固定数量的相关数据。元组是不可变的序列，也被称为只读列表，因为一旦元组被创建，就不能修改其中的值。元组的语法是将多个值用逗号分隔，然后用括号括起来。例如，<code>(1, 2, 3)</code>是一个元组，其中包含三个整数。元组可以包含任何类型的对象，包括其他元组。元组的元素可以通过下标索引进行访问，从0开始计数。例如，<code>(1, 2, 3)[1]</code>的值为2。元组也支持切片操作，可以通过切片获取元组的子集。元组与列表的不同之处在于，元组是不可变的，也就是说不能增加或删除元素。此外，元组可以用于作为字典的键或集合的元素，而列表则不能。</p><h2 id="集合：set"><a href="#集合：set" class="headerlink" title="集合：set"></a>集合：set</h2><p>Python中set表示集合，是一种无序、可变的集合数据类型。Set是由一堆元素组成的、不重复的集合，其中包含可以是整数、浮点数、字符串等等。Python的set类似于数学中的集合，它可以用于去重、交集、并集等操作。Set的操作速度非常快，比List快得多。</p><h2 id="文件操作：open和close"><a href="#文件操作：open和close" class="headerlink" title="文件操作：open和close"></a>文件操作：open和close</h2><p>open和close是Python编程语言中的文件操作函数，用于打开和关闭文件。</p><ul><li><p>open函数可以用于打开文件，并返回文件对象。它还可以指定文件的访问模式。语法为：<code>open(file, mode=&#39;r&#39;, buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</code>。</p></li><li><p>close函数用于关闭已经打开的文件。语法为：<code>file.close()</code>。</p></li></ul><p>例如，以下代码使用open函数打开了一个名为‘example.txt’的文本文件，并将其赋值给变量f：</p><pre><code>f = open(&#39;example.txt&#39;, &#39;r&#39;)</code></pre><p>在完成对文件的操作后，我们可以使用close函数将文件关闭：</p><pre><code>f.close()</code></pre><p>注意，打开的文件必须关闭，以释放系统资源。除非我们采用了上下文管理器来自动关闭文件，比如：</p><pre><code>with open(&#39;example.txt&#39;, &#39;r&#39;) as f:    # 对文件进行操作，如读取文件内容</code></pre><p>上下文管理器会自动关闭文件，不需要手动调用close函数。</p><h2 id="异常处理：try-except"><a href="#异常处理：try-except" class="headerlink" title="异常处理：try-except"></a>异常处理：try-except</h2><p>在Python中，我们可以使用try-except语句来捕获并处理异常。try语句块包含可能会引发异常的代码，如果有异常发生，则会立即跳转到except语句块。except语句块用于处理异常。</p><p>下面是一个示例：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    x <span class="token operator">=</span> int<span class="token punctuation">(</span>input<span class="token punctuation">(</span><span class="token string">"请输入一个整数："</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">/</span>x<span class="token punctuation">)</span><span class="token keyword">except</span> ZeroDivisionError<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"除数不能为零！"</span><span class="token punctuation">)</span><span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"输入不是一个整数！"</span><span class="token punctuation">)</span></code></pre><p>在这个例子中，我们尝试将用户输入的字符串转换为整数，然后计算10除以该数并打印结果。如果输入不是整数或者是0，则会引发相应的异常。在except块中，我们分别处理这两种异常并打印出相应的错误信息。</p><p>除了具体的异常类型外，我们还可以使用except语句来处理所有异常：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># some code here</span><span class="token keyword">except</span><span class="token punctuation">:</span>    <span class="token comment" spellcheck="true"># handle all exceptions here</span></code></pre><p>这种方法不太推荐，因为它可能会掩盖真正的问题，并使调试过程变得更加困难。最好的方法是针对可能发生的每种异常类型编写一个专门的except块，以便我们可以针对具体问题进行处理。</p><h2 id="类定义：class"><a href="#类定义：class" class="headerlink" title="类定义：class"></a>类定义：class</h2><p>在Python中，class是一种数据类型，用于定义新的对象类型。类定义包括类名、属性和方法。</p><p>下面是一个简单的类定义示例：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> age<span class="token punctuation">)</span><span class="token punctuation">:</span>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name        self<span class="token punctuation">.</span>age <span class="token operator">=</span> age        <span class="token keyword">def</span> <span class="token function">get_name</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">return</span> self<span class="token punctuation">.</span>name        <span class="token keyword">def</span> <span class="token function">get_age</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">return</span> self<span class="token punctuation">.</span>age</code></pre><p>上面的代码定义了一个名为Person的类，该类包括一个构造函数(<strong>init</strong>)、两个属性(name和age)和两个方法(get_name和get_age)。构造函数可以在创建新的Person对象时初始化对象的属性。</p><p>可以通过以下方式创建新的Person对象：</p><pre class=" language-python"><code class="language-python">person1 <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">"Alice"</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span>person2 <span class="token operator">=</span> Person<span class="token punctuation">(</span><span class="token string">"Bob"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span></code></pre><p>然后，可以使用方法获取对象的属性：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>person1<span class="token punctuation">.</span>get_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 输出 "Alice"</span><span class="token keyword">print</span><span class="token punctuation">(</span>person2<span class="token punctuation">.</span>get_age<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true"># 输出 30</span></code></pre><p>类定义是面向对象编程的基础，它允许我们创建自定义数据类型和操作它们的方法。</p><h2 id="模块导入：import"><a href="#模块导入：import" class="headerlink" title="模块导入：import"></a>模块导入：import</h2><p>在Python中，模块是指一组相关的函数、变量和其他定义的代码，这些都被封装和组织在一起，以便在需要的时候进行使用。模块使得代码的编写更加的方便和灵活，并且可以被重复使用。</p><p>在使用Python语言时，我们可以通过“import”语句来导入模块。在导入模块之后，就可以使用这个模块中定义的函数、变量和其他代码了。</p><p>例如，我们可以使用以下代码来导入sys模块:</p><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> sys</code></pre><p>上述代码意味着我们将sys模块导入到我们的代码中，以便我们可以使用sys模块中的函数和变量。导入之后，我们就可以使用sys模块中的函数了，例如:</p><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>version<span class="token punctuation">)</span></code></pre><p>上述代码会打印出当前系统中使用的Python版本信息。</p><p>我们也可以导入模块中的特定函数或变量。例如，我们可以使用以下代码来导入sys模块中的version变量:</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> sys <span class="token keyword">import</span> version</code></pre><p>上述代码意味着我们只导入sys模块中的version变量。这种方式相对于使用import语句导入整个模块，可以减少导入的代码量并且更加的方便。</p><p>如果导入的模块与当前代码处于同一目录下，或者在Python搜索路径中可用，我们可以通过使用代码来直接导入：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> module_name <span class="token keyword">import</span> function_name1<span class="token punctuation">,</span>function_name2<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></code></pre><p>例如，如果我们有一个文件名为“my_module.py”的模块，其中定义了一个名为“greet”的函数，则可以通过以下方式导入该函数：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> my_module <span class="token keyword">import</span> greet</code></pre><p>这个方法仅导入greet，不会导入模块中的其他函数或变量。</p><p>总之，模块导入可帮助我们使用Python代码更加方便和灵活。我们可以使用整个模块、特定的函数和变量，以及从特定模块中导入特定的函数和变量。</p><h2 id="匿名函数：lambda"><a href="#匿名函数：lambda" class="headerlink" title="匿名函数：lambda"></a>匿名函数：lambda</h2><p>匿名函数是一种没有名称的函数，也称为 lambda 函数。它通常用于一次性使用，不需要定义或调用多次函数的情况。可以将 lambda 函数视为在函数定义的情况下编写的简短函数。 </p><p>lambda 函数的语法如下：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">lambda</span> arguments<span class="token punctuation">:</span> expression</code></pre><p>其中，arguments 是函数参数，可以是多个参数，用逗号隔开。expression 是函数体，是包含在 lambda 函数内部的一个表达式，它会被计算并返回结果。 </p><p>例如，以下是一个简单的 lambda 函数示例：</p><pre class=" language-python"><code class="language-python">x <span class="token operator">=</span> <span class="token keyword">lambda</span> a<span class="token punctuation">:</span> a <span class="token operator">+</span> <span class="token number">10</span><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre><p>输出结果为 15，因为将 5 传递给 lambda 函数后，它计算了 a + 10 并返回 15。 </p><p>lambda 函数还可以用于排序、过滤、映射和减少等操作。例如，在 Python 中，可以使用内置函数 sorted() 和 lambda 函数按字母顺序对字符串列表进行排序：</p><pre class=" language-python"><code class="language-python">fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">]</span>sorted_fruits <span class="token operator">=</span> sorted<span class="token punctuation">(</span>fruits<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>sorted_fruits<span class="token punctuation">)</span></code></pre><p>输出结果为 [“apple”, “banana”, “cherry”]，因为 lambda 函数将字符串转换为小写字母，从而按字母顺序对列表进行排序。</p><h2 id="列表推导式：list-comprehension"><a href="#列表推导式：list-comprehension" class="headerlink" title="列表推导式：list comprehension"></a>列表推导式：list comprehension</h2><p>列表推导式是一种快速创建新列表的方法，可以使用一行代码完成一些常见的操作，例如过滤、变换等。</p><p>列表推导式基本语法为：</p><pre><code>[expression for item in iterable if condition]</code></pre><p>其中，<code>expression</code> 是对 <code>item</code> 进行处理的表达式，<code>item</code> 是可迭代对象中的每个元素，<code>iterable</code> 是可迭代对象，<code>if condition</code> 是过滤条件，可选。</p><p>例如，我们想将一个列表中的所有偶数取平方，可以这样实现：</p><pre class=" language-python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>squares <span class="token operator">=</span> <span class="token punctuation">[</span>num <span class="token operator">**</span> <span class="token number">2</span> <span class="token keyword">for</span> num <span class="token keyword">in</span> numbers <span class="token keyword">if</span> num <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>squares<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [4, 16]</span></code></pre><p>上述代码中，<code>expression</code> 为 <code>num ** 2</code>，<code>item</code> 为 <code>num</code>，<code>iterable</code> 为 <code>numbers</code>，<code>if condition</code> 为 <code>num % 2 == 0</code>（筛选偶数）。</p><p>列表推导式还支持嵌套，可以在一个列表推导式中完成多个操作。例如，我们将一个二维列表中的所有元素提取出来，可以这样实现：</p><pre class=" language-python"><code class="language-python">matrix <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>elements <span class="token operator">=</span> <span class="token punctuation">[</span>item <span class="token keyword">for</span> row <span class="token keyword">in</span> matrix <span class="token keyword">for</span> item <span class="token keyword">in</span> row<span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>elements<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># [1, 2, 3, 4, 5, 6]</span></code></pre><p>上述代码中，列表推导式包括两层循环，<code>expression</code> 为 <code>item</code>，<code>item</code> 为二维列表中的每个元素，<code>iterable</code> 为外层循环中的 <code>row</code>，内层循环中的 <code>item</code>。</p><h2 id="字典推导式：dictionary-comprehension"><a href="#字典推导式：dictionary-comprehension" class="headerlink" title="字典推导式：dictionary comprehension"></a>字典推导式：dictionary comprehension</h2><p>字典推导式（dictionary comprehension）是一种快速创建字典的方式，类似于列表推导式。使用字典推导式，可以一行代码快速创建一个字典。</p><p>字典推导式的基本语法格式如下：</p><pre class=" language-python"><code class="language-python"><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;key: value for key, value in iterable&amp;#125;</span></code></pre><p>其中，key 表示字典的键，value 表示字典的值，iterable 表示可迭代对象，如列表、元组、字典等。</p><p>下面是一个简单的例子，展示如何使用字典推导式创建一个字典：</p><pre class=" language-python"><code class="language-python">my_dict <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;i: i ** 2 for i in range(5)&amp;#125;</span><span class="token keyword">print</span><span class="token punctuation">(</span>my_dict<span class="token punctuation">)</span></code></pre><p>输出：</p><pre><code>&#123;0: 0, 1: 1, 2: 4, 3: 9, 4: 16&#125;</code></pre><p>在这个例子中，使用 range(5) 创建一个包含 0 到 4 的整数序列。然后，使用字典推导式将每个整数 i 作为键，将 i 的平方作为值创建一个新的字典。</p><p>可以在字典推导式中添加 if 条件语句来过滤特定的键值对，例如：</p><pre class=" language-python"><code class="language-python">my_dict <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;i: i ** 2 for i in range(10) if i % 2 == 0&amp;#125;</span><span class="token keyword">print</span><span class="token punctuation">(</span>my_dict<span class="token punctuation">)</span></code></pre><p>输出：</p><pre><code>&#123;0: 0, 2: 4, 4: 16, 6: 36, 8: 64&#125;</code></pre><p>在这个例子中，使用 range(10) 创建一个包含 0 到 9 的整数序列。然后，使用 if 条件语句过滤了所有奇数键值对，只保留偶数键值对创建一个新的字典。</p><h2 id="生成器：generator"><a href="#生成器：generator" class="headerlink" title="生成器：generator"></a>生成器：generator</h2><p>生成器是一种在 Python 中使用非常方便的函数，它可以动态生成数据流，在生成数据的过程中能够动态地改变数据。生成器可以使代码更加简洁、可读和高效。</p><p>Python 中的生成器是一种特殊的迭代器，它们可以通过 iterable 协议迭代访问。生成器函数通过 yield 语句返回数据，而不是使用 return 语句。当生成器函数被调用时，它返回一个生成器对象，而不是实际的返回值。生成器函数可以暂停执行，并且在下一次迭代时从上次暂停的地方恢复执行，这使得生成器在迭代处理大数据时非常有效。</p><p>生成器可以用于处理大的、无限的或懒惰计算的数据集，因为它们可以一次生成一个数据项，并且只在需要时才计算下一个值。这减少了内存消耗，并使程序运行更快。生成器还可以作为线程和协程的基础，因为它们可以暂停并恢复执行。</p><h2 id="迭代器：iterator"><a href="#迭代器：iterator" class="headerlink" title="迭代器：iterator"></a>迭代器：iterator</h2><p>迭代器是一种对象，它允许迭代（遍历）一个集合中的所有元素，而不需要暴露该集合的内部实现。迭代器提供了访问集合元素的一种通用方式，可以遍历数组、链表、哈希表等各种数据结构。在编程语言中，迭代器通常实现了一个next()方法，该方法返回集合中下一个元素，并且在到达集合末尾时抛出一个特定的异常或返回一个指定值。迭代器的好处在于可以方便地遍历任意的集合，并且不需要关心集合的内部实现。这也使得代码更加模块化和可复用，因为迭代器可以针对不同的集合类型进行复用。</p><h2 id="装饰器：decorator"><a href="#装饰器：decorator" class="headerlink" title="装饰器：decorator"></a>装饰器：decorator</h2><p>装饰器是一种Python语言功能，它允许在不修改原始函数代码的情况下修改函数行为。装饰器本质上是一个接受函数作为参数并返回新函数的高阶函数，新函数通常会在原始函数之前或之后执行一些额外的操作，比如记录函数的执行时间、缓存函数的结果等。装饰器可用于在代码中添加横切关注点，例如调试、性能分析、安全验证、日志记录等。</p><p>以下是一个装饰器的简单示例：</p><pre class=" language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">my_decorator</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Before the function is called."</span><span class="token punctuation">)</span>        func<span class="token punctuation">(</span><span class="token punctuation">)</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"After the function is called."</span><span class="token punctuation">)</span>    <span class="token keyword">return</span> wrapper@my_decorator<span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello!"</span><span class="token punctuation">)</span>say_hello<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre><p>在这种情况下，<code>@my_decorator</code>是一个语法糖，它将<code>say_hello</code>函数传递给<code>my_decorator</code>中定义的<code>wrapper</code>函数作为参数，并将<code>wrapper</code>函数返回作为新的<code>say_hello</code>函数。在调用<code>say_hello</code>时，实际上调用的是<code>my_decorator</code>返回的<code>wrapper</code>函数，该函数在执行<code>say_hello</code>前打印一行消息，并在执行完<code>say_hello</code>后再打印一行消息。</p><p>输出：</p><pre><code>Before the function is called.Hello!After the function is called.</code></pre><h2 id="模块：module"><a href="#模块：module" class="headerlink" title="模块：module"></a>模块：module</h2><p>模块是指通过将函数、类和变量封装在一起的方式来组织代码的一种方式。它们使得代码更易于维护、更易于复用，并且可以使开发团队更加有效地协作。在一个项目中，可以将不同的功能划分为不同的模块，使得代码更加有序，并且能够更容易地编写单元测试。</p><p>在 Python 中，每个文件都可以作为一个模块。可以通过 <code>import</code> 语句将一个模块中的函数、类或变量引入到另一个模块中。如果一个 Python 脚本被当作一个独立的应用程序来执行，那么它也可以被认为是一个模块。在这种情况下，可以使用 <code>if __name__ == &#39;__main__&#39;:</code> 代码块来指定应该在脚本被执行时执行的操作。</p><h2 id="包：package"><a href="#包：package" class="headerlink" title="包：package"></a>包：package</h2><p>Python包是一种组织Python模块的方式。它可以包含一个或多个模块、子包和其他包。Python包具有一个特定的结构，其中包含一个名为<code>__init__.py</code>的Python模块（也可以是一个空文件），它会在导入包时执行。在<code>__init__.py</code>文件中，可以定义包的公共接口，并在其中导入其他模块或子包。当导入包时，Python解释器会自动执行<code>__init__.py</code>文件，并将包中的所有模块都加载到内存中，使它们可以被使用。Python包非常有用，可以帮助开发人员将相关的代码组织在一起，提高代码的可读性和可维护性。</p><h2 id="闭包：closure"><a href="#闭包：closure" class="headerlink" title="闭包：closure"></a>闭包：closure</h2><p>闭包是指在编程语言中，一个函数和其相关变量或环境的组合，它允许函数访问在定义时不可见的变量。换句话说，闭包可以保留外部作用域的变量，使得这些变量在函数内部仍然可以使用。闭包有助于实现函数式编程中的一些常见模式，例如函数工厂、柯里化和函数式组合。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>春的脚步</title>
+      <link href="/2023/03/12/sheying-1/"/>
+      <url>/2023/03/12/sheying-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="春"><a href="#春" class="headerlink" title="春"></a>春</h2><blockquote><p>一切都像刚睡醒的样子，欣欣然张开了眼。山朗润起来了，水涨起来了，太阳的脸红起来了。<br>——朱自清《春》</p></blockquote><p><img src="/2023/03/12/sheying-1/2.png" alt="2"><br><img src="/2023/03/12/sheying-1/1.png" alt="1"><br><img src="/2023/03/12/sheying-1/3.png" alt="3"><img src="/2023/03/12/sheying-1/4.png" alt="4"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python·贰</title>
+      <link href="/2023/03/12/py2/"/>
+      <url>/2023/03/12/py2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python中的一些算法表达式"><a href="#Python中的一些算法表达式" class="headerlink" title="Python中的一些算法表达式"></a>Python中的一些算法表达式</h2><h3 id="1-‘-x2F-‘号"><a href="#1-‘-x2F-‘号" class="headerlink" title="1. ‘&#x2F;‘号"></a>1. ‘&#x2F;‘号</h3><pre><code>语法```Python1.3 / 2```含义3除以2,结果1.5</code></pre><h3 id="2-‘-x2F-x2F-‘号"><a href="#2-‘-x2F-x2F-‘号" class="headerlink" title="2. ‘&#x2F;&#x2F;‘号"></a>2. ‘&#x2F;&#x2F;‘号</h3><pre><code>```Python语法3 // 2```含义3除2取小于被除数的最大整数（也叫地板除），</code></pre><h2 id="Python中的一些内置函数-BIF"><a href="#Python中的一些内置函数-BIF" class="headerlink" title="Python中的一些内置函数(BIF)"></a>Python中的一些内置函数(BIF)</h2><h3 id="divmod-A-B"><a href="#divmod-A-B" class="headerlink" title="divmod(A,B)"></a>divmod(A,B)</h3><p>同时求出两(A,B)地板除结果和余数的值<br>语法:<br>    <code>Python     divmod(3,2)     答案（1,1）     </code></p><h3 id="abs-x"><a href="#abs-x" class="headerlink" title="abs(x)"></a>abs(x)</h3><p>x的绝对值</p><h3 id="int-x"><a href="#int-x" class="headerlink" title="int(x)"></a>int(x)</h3><p>含义将x转换为整数</p><h3 id="float-3-14"><a href="#float-3-14" class="headerlink" title="float(3.14)"></a>float(3.14)</h3><p>将3.14转换成浮点型</p><h3 id="complex-re-im"><a href="#complex-re-im" class="headerlink" title="complex(re,im)"></a>complex(re,im)</h3><p>返回一个复数,re是实部，im是虚部</p><h3 id="pow-x-y"><a href="#pow-x-y" class="headerlink" title="pow(x,y)"></a>pow(x,y)</h3><p>计算x的y次方</p><h3 id="x-y"><a href="#x-y" class="headerlink" title="x ** y"></a>x ** y</h3><p>计算x的y次幂</p><blockquote><p>相关知识讲解可以搜索小甲鱼的《零基础入门Python》直达链接 ➡ <a href="https://www.bilibili.com/video/BV1c4411e77t?p=10&vd_source=144f1e13467c777960552c6f2461dd91">点我点我！！！</a>。</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于MySQL语法总结</title>
+      <link href="/2023/03/08/MySQL4/"/>
+      <url>/2023/03/08/MySQL4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><p>Table的命令，(表是存储数据的基本单位)</p><p>命令<br>先进入一个数据库</p><pre class=" language-mysql"><code class="language-mysql">use  + 数据库名字;</code></pre><p>输入</p><pre class=" language-mysql"><code class="language-mysql">create table + 表名字 (A int，B varchar(20));</code></pre><p>然后就创建成功了</p><h2 id="在数据表中插入数据"><a href="#在数据表中插入数据" class="headerlink" title="在数据表中插入数据"></a>在数据表中插入数据</h2><p>语法<br>要添加以下信息，  蔡徐坤   250   59  </p><pre class=" language-mysql"><code class="language-mysql">Insert  into  student  values("蔡徐坤",“250”,“59”)；</code></pre><h2 id="星号（-）"><a href="#星号（-）" class="headerlink" title="星号（*）"></a>星号（*）</h2><p> 星号*代表所有字段的意思</p><h2 id="查询内容"><a href="#查询内容" class="headerlink" title="查询内容"></a>查询内容</h2><p>格式</p><pre class=" language-mysql"><code class="language-mysql">select * from + 数据表；select 要查询的内容 from + 数据表</code></pre><p>1 创建数据库<br>    create database tengxun;<br>2 先判断数据库存在吗 不存在再创建tengxun;<br>    create database if not exists tengxun;<br>3 创建一个数据库tengxun的时候并且字符集设置为GBK<br>    create database tengxun character set GBK;<br>2 alter修改(update:修改的数据)<br>   alter database tengxun character set UTF-8;<br>   alter修改的是数据库、数据表<br>3 查询（select）<br>     a    查看数据库名称<br>       show databases;<br>     b    查看当前数据库的建库语句<br>       show create database tengxun;<br>4 查询<br>    use mysql<br>    查看当前所在的数据库<br>    select database();<br>5 删除<br>    关于数据库的删除<br>    drop database tengxun;<br>    wzry表<br>    drop table wzry;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于数据模型</title>
+      <link href="/2023/03/04/mysql3/"/>
+      <url>/2023/03/04/mysql3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据结构、数据操作和数据约束"><a href="#数据结构、数据操作和数据约束" class="headerlink" title="数据结构、数据操作和数据约束"></a>数据结构、数据操作和数据约束</h2><p><em><strong>数据模型由三部分组成：数据结构、数据操作和数据约束</strong></em></p><blockquote><p>1.数据结构：数据结构主要描述数据的类型、内容、性质、以及数据之间的联系，是整个数据模型的基础，而针对数据的操作和数据之间的约束都是建立在数据结构的基础上</p></blockquote><blockquote><p>2.数据操作：主要定义了在相应的数据结构上的操作类型和操作方式（数据库中的增删改查等）</p></blockquote><blockquote><p>3.数据约束：数据约束主要用来描述数据库中数据结构之间的语法、词义联系以及彼此之间的相互约束和制约关系（如MySQL中使用外键保证数据之间的数据完整性）</p></blockquote><h2 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h2><h3 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h3><h4 id="概念数据模型（CDM）"><a href="#概念数据模型（CDM）" class="headerlink" title="概念数据模型（CDM）"></a>概念数据模型（CDM）</h4><p>概念数据模型是现实世界到信息世界的第一层抽象，主要是在高水平和面向业务的角度对信息的一种描述，通常作为业务人员和技术人员之间沟通的桥梁。作为现实世界的概念化结构，这种数据</p><p>模型使得数据库的设计人员在最初的数据库设计阶段将精力集中在数据之间的联系上，而不用同时关注数据的底层细节（如所用的计算机系统的特性以及数据库管理系统—DBMS的特性）。</p><p>概念数据模型主要的贡献在于分析数据之间的联系，它是用户对数据存储的一种高度抽象，反应的是用户的一种业务层面的综合信息需求。</p><p>在这个阶段一般会形成整个数据模型或者是软件系统中的实体的概念以及实体之间的联系，为构建逻辑数据模型奠定基础。下图中描述了现实世界和信息世界以及最终转换成计算机世界信息的</p><p>转流程。</p><h4 id="逻辑数据模型（LDM）"><a href="#逻辑数据模型（LDM）" class="headerlink" title="逻辑数据模型（LDM）"></a>逻辑数据模型（LDM）</h4><p>逻辑数据模型是对概念数据模型进一步具体化，在概念数据模型定义实体的基础上定义了各个实体的属性，是用户从数据库的角度能够看到的数据的模型，是所使用的数据库管理系统（Database Management System，DBMS）所支持的数据类型（网状数据模型、层次数据模型、关系数据模型）。这种数据模型架起了用户和系统之间的桥梁，既要面向用户，同时也考虑到了所用的DBMS所支持的特性。</p><p>　　逻辑数据模型反映了系统分析设计人员针对数据在特定的存储系统（如MySQL）的观点，是对概念数据模型的进一步细化和划分。逻辑数据模型是根据业务之间的规则产生的，是关于业务对象、业务对象数据以及业务对象彼此之间关系的蓝图。</p><p>　　逻辑数据模型的内容包括所有的实体、实体的属性、实体之间的关系以及每个实体的主键、实体的外键（用于维护数据完整性）。其主要目标是尽可能详细的描述数据，但是并不涉及这些数据的具体物理实现。逻辑数据模型不仅会最终影响数据库的设计方向，并最终会影响到数据库的性能（如主键设计、外键等都会最终影响数据库的查询性能）。</p><p>　　逻辑数据模型是开发物理数据库的完整文档，逻辑数据模型主要采用的是层次模型、网状模型、关系模型，其中最常用的是关系模型，对应的数据库称之为关系型数据库，如MySQL，</p><p>SQL server,Oracle等。</p><h4 id="物理数据模型（PDM）"><a href="#物理数据模型（PDM）" class="headerlink" title="物理数据模型（PDM）"></a>物理数据模型（PDM）</h4><p>物理数据模型，又称为物理模型，是概念数据模型和逻辑数据模型在计算机中的具体表示。该模型描述了数据在物理存储介质上的具体组织结构，不但与具体的数据库管理系统相关，同时还与具体的操作系统以及硬件有关，但是很多工作都是由DBMS自动完成的，用户所要做的工作其实就是添加自己的索引等结构即可。</p><p>　　物理数据模型是在逻辑数据模型的基础上，综合考虑各种存储条件的限制，进行数据库的设计，从而真正实现数据在数据库中的存放。其主要的工作是根据逻辑数据模型中的实体、属性、联系转换成对应的物理模型中的元素，包括定义所有的表和列，定义外键以维持表之间的联系等</p><h3 id="关系模型"><a href="#关系模型" class="headerlink" title="关系模型"></a>关系模型</h3><p>关系表示实体与实体之间的联系，然后基于关系数据集合进行数据的查询、更新以及控制等操作同时对数据的更新操作进行实体完整性、参照完整性、用户自定义完整性约束<br>举个例子：<br>你现在手上有两个名单AB，名单A上是姓名，名单B上是成绩，这两个名单就有一个关系XXX同学的成绩是XXX分其中分数是这个同学的一个属性而他的姓名也是一种属性</p><blockquote><p>即一个属性与另一个属性的关系</p></blockquote><h3 id="层次模型"><a href="#层次模型" class="headerlink" title="层次模型"></a>层次模型</h3><p>层次模式就好解释多了你可以把它想象成一棵树树上有无数的树枝层次模型就是这样</p><blockquote><p>层次模型概述. 用树形结构表示实体之间联系的模型叫层次模型<br>层次模型有且只有一个根节点而根节点下有无数的子节点</p></blockquote><h3 id="网状模型"><a href="#网状模型" class="headerlink" title="网状模型"></a>网状模型</h3><blockquote><p><em><strong>用有向图表示实体和实体之间的联系的数据结构模型称为网状数据模型。</strong></em><br>没有双亲（好像在骂人）节点且至少有一个节点可以有多于一个的双亲</p></blockquote><p>网状数据模型中所有的节点允许脱离父节点而存在，也就是说说在整个模型中允许存在两个或多个没有根节点的节点，同时也允许一个节点存在一个或者多个的父节点</p><p>ABC三人<br>A是B的姑姑,A也是C的老师<br>B是A的侄子，B是C的同学也是C的女朋友</p><p>其中ABC每个节点都是单独存在的</p><p>只是说的话太麻烦了可以看下列图片<br><img src="/2023/03/04/mysql3/1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python笔记·壹</title>
+      <link href="/2023/02/25/py1/"/>
+      <url>/2023/02/25/py1/</url>
+      
+        <content type="html"><![CDATA[<hr><h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><br><img src="/2023/02/25/py1/1.png"></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p><h2 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h2><p>randint函数<br>用法</p><pre class=" language-Python"><code class="language-Python">random.randint(1,10)//含义随机在1—10中选择数字</code></pre><h2 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h2><p>import 引用模块<br>语法</p><pre class=" language-Python"><code class="language-Python">import + 模块名称</code></pre><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h3 id="语句用法"><a href="#语句用法" class="headerlink" title="语句用法"></a>语句用法</h3><p>目标当变量A大于10时输出你好反之输出你好我们不熟</p><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)if A >= 10:    print("你好")else:    print("你好我们不熟")</code></pre><h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><p>在python中有一个比较奇特的写法三元表达式<br>语法</p><pre class=" language-Python"><code class="language-Python">变量 = 值1 if 条件 else 值2</code></pre><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)print("你好") if A >= 10 else print("你好我们不熟")</code></pre><p>在比较复杂的循环结构中我更推荐前者这样更直观更容易修改</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>爱是什么</title>
+      <link href="/2023/02/21/ger/"/>
+      <url>/2023/02/21/ger/</url>
+      
+        <content type="html"><![CDATA[<p>在充满希望的高中生活有一个词会一直出现在里面<strong>爱情</strong>这个美丽的如同玫瑰一般的词语，美的令人向往但它的尖刺也刺伤了无数人的心。</p><p>现在这个时代因为一些原因导致男女本身都快成为了对立忠贞不渝的爱情仿佛已经彻底消失一般，绝大多数的爱情都会沾染上金钱的腐臭，在想要解决这个问题之前我们需要先知道一个根本。</p><p>我们为什么会爱上一个人？</p><p>从古到今有很多人都在找寻答案，但是这太过艰难，如果用理论解释太过抽象单纯来讲却也讲不出来，剪不断理还乱</p><p>我们如何会喜欢上一段关系呢?</p><p>有人说一见钟情也许有但是多半是馋人家身子</p><p>曾奇峰老师说：当在这个关系中，我觉得我很好，然后我就爱上了你</p><p>曾奇峰老师的话中可以得知他认为爱情是以个人为中心我认为我很好所以我爱你其中我个人在与你相处的过程中感到舒适所以我喜欢你</p><p>它好像不符合普世价值观中的“付出”，显得有点自私与自恋，好像在说一切都在为了自己。但它在心理学上的逻辑十分地符合。</p><p>人之初性本恶每个人出生就是要为了自己这个无可厚非，人本主义心理学上讲人们都有着自我实现的价值需求使自己更加完整  </p><p>再者说，就算本质上是为了自己又怎么样。死道友不死贫道</p><p>你干了一件好事，但是你心里在想一件坏事这样如何你依然是好人因为你又没干坏事</p><p>再者说谁又不喜欢被人认可的感觉呢</p><p>而很多时候我们不喜欢一段关系，旁人看起来觉得很奇怪。因为对方给了你很多东西啊。他给了你钱，给了你他的时间与精力，把全部的身心放在了你身上，给了你很多的帮助与付出。</p><p>但我们很多人确实并不喜欢这样的关系。看起来是别人在付出，别人在给予，却会让人感觉对方处在比你高的位置，映照着你的不足，弱小，“坏”。</p><p>因为对方是好的，而对方给予了你很多东西，然后把你投射成一个“坏”的人</p><p>况且在这世上，有太多的事物被冠以爱的名义</p><p>假爱往往都蕴藏着控制，权力，与自恋</p><p>我靠近，接近你，打着爱的名义，却希望你如我所愿。我对你真正的，本来的样貌毫无兴趣，只希望你变成我想要的样子</p><p>心理学家武志红说，爱是“如你所是”。（假爱则是“如我所愿”）</p><p>如果爱是控制是改变我变成不喜欢的人那么这不是爱是恶</p><p>用力过猛的关系中，有着这样的一个底层逻辑：我向你展示我是好的；而你必须给出证明，让我确信，我是好的。否则，我就觉得自己是坏的，转而觉得你也是坏的。</p><p>而在真正爱的相遇中，我觉得我是好的，所以无需证明，我对你好，但不期待你如何回应我，也不控制你。或者说，我爱你，与你何干。</p><p>我爱你，并不是因为你做了什么，给予了我什么，或是你表现出来什么。你本身的存在，就已经足够好。</p><p>在这样的关系中，可以帮助你更好地成为自己，而不是教你成为更好的自己，因为你的真我，本质上就是最好的。</p><p>我们把自己的内心与各种各样的东西放在了这份亲密关系中，然后在关系中照见，看到了自己，并喜欢上了自己，觉得自己其实也很“好”。</p><p>然后我就爱上了你</p><p>鲁米有首诗写得很好可以一读体验。<br><em><strong>如果我带给你礼物，</strong></em></p><p> <em><strong>就像带着黄金去金矿，带着水去海洋。</strong></em></p><p><em><strong>我想到的一切，都是像带着香料去东方</strong></em></p><p><em><strong>所以我真的不知道带给你什么。</strong></em></p><p><em><strong>给你我的心脏，我的灵魂。</strong></em></p><p><em><strong>都不够，因为你都具有。</strong></em></p><p><em><strong>所以，我给你带来了一面镜子，</strong></em> </p><p><em><strong>看看你自己，然后记住我。</strong></em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 恋爱 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 思考 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于MySQL</title>
+      <link href="/2023/02/12/MySQL1/"/>
+      <url>/2023/02/12/MySQL1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>MySQL数据库的三大特点<br>1.数据独立性，拓展性<br>2.插入数据<br>3.删除数据</p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><h3 id="插入数据-insert"><a href="#插入数据-insert" class="headerlink" title="插入数据 (insert)"></a>插入数据 <strong>(insert)</strong></h3><p>语法<br></p><pre><code> insert  into 表名 values(&quot;字段1&quot;,“字段2”,&quot;字段3&quot;,&quot;字段4&quot;,&quot;字段5&quot;);</code></pre><p><em><strong>注(AB是要录入的东西记得属性中间加逗号隔开)</strong></em></p><h3 id="数据更新-update"><a href="#数据更新-update" class="headerlink" title="数据更新 (update)"></a>数据更新 <strong>(update)</strong></h3><pre><code>update + 数据表名字 set + 修改的属性 = 修改数值 where name =&quot;&quot;</code></pre><p>语法例子</p><pre><code>update wzry set att = 200 where name =&quot;李白&quot;</code></pre><h3 id="数据删除-delete"><a href="#数据删除-delete" class="headerlink" title="数据删除 (delete)"></a>数据删除 <strong>(delete)</strong></h3><p>语法</p><pre><code>delete from table_name where +删除属性名字 = 删除数值;</code></pre><p>例子</p><pre><code>delete from wzry where age = 200;</code></pre><h3 id="数据选择-select"><a href="#数据选择-select" class="headerlink" title="数据选择 (select)"></a>数据选择 <strong>(select)</strong></h3><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p> <strong>show</strong> (展示)<br> <strong>databasaes</strong> (数据库)<br> <strong>show databases</strong> (含义展示所有数据库)</p><h2 id="数据库组成部分"><a href="#数据库组成部分" class="headerlink" title="数据库组成部分"></a>数据库组成部分</h2><p>1.数据库( <em><strong>datbase</strong></em> )<br>2.数据库管理系统<br>3.数据库管理员( <em><strong>Administror</strong></em> )</p><h2 id="数据冗余概念"><a href="#数据冗余概念" class="headerlink" title="数据冗余概念"></a>数据冗余概念</h2><p>多余无用的数据或重复的数据<br>比如四个字就可以表达的含义用40个字所讲述的意思</p><h2 id="数据库语法"><a href="#数据库语法" class="headerlink" title="数据库语法"></a>数据库语法</h2><h3 id="新建数据库"><a href="#新建数据库" class="headerlink" title="新建数据库"></a>新建数据库</h3><pre class=" language-mysql"><code class="language-mysql">create database + 数据库名;</code></pre><h3 id="新建数据库表"><a href="#新建数据库表" class="headerlink" title="新建数据库表"></a>新建数据库表</h3><pre class=" language-mysql"><code class="language-mysql">create + table_nume;</code></pre><h3 id="打开数据库"><a href="#打开数据库" class="headerlink" title="打开数据库"></a>打开数据库</h3><pre class=" language-mysql"><code class="language-mysql">use + 数据库名;</code></pre><h2 id="数据表"><a href="#数据表" class="headerlink" title="数据表"></a>数据表</h2><h3 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a>作用</h3><pre><code>存储数据的重要对象（一个具体的事物，一类具体的事物）</code></pre><h3 id="如何建立"><a href="#如何建立" class="headerlink" title="如何建立"></a>如何建立</h3><pre class=" language-mysql"><code class="language-mysql">1.界面化（可以直接用鼠标进行操作）2.(重点掌握的) `create table  TAB`</code></pre><blockquote><p>数据模型（物理模型）</p></blockquote><h2 id="软件开发的流程"><a href="#软件开发的流程" class="headerlink" title="软件开发的流程"></a>软件开发的流程</h2><p>1.画出网页&#x2F;客户端草图<br>2.写web网图<br>3.初始化数据库&#x2F;新建数据库<br>4.后端代码实现<br>5.测试</p><p>mysql -u root &#x3D;p含义：以超级管理员用户进入MySQL</p><h2 id="数据库设计的基本步骤"><a href="#数据库设计的基本步骤" class="headerlink" title="数据库设计的基本步骤"></a>数据库设计的基本步骤</h2><p>1.<strong>需求分析</strong><em>(确定功能，软件有哪些功能)</em><br><br>2.<strong>概念结构设计</strong><em>(确定未来设计方向)</em><br><br>3.<strong>逻辑结构设计</strong><em>(确定规则)</em><br><br>4.<strong>物理结构设计</strong><em>(表结构表中字段之间的结构)</em><br><br>5.<strong>数据库实施</strong><em>(确定表数据库字段)</em><br><br>6.<strong>数据库运行和维护</strong><em>(运维数据库)</em><br></p><h4 id="实体集"><a href="#实体集" class="headerlink" title="实体集"></a>实体集</h4><p>实体集：实体的属性所形成的集合就是实体集</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C语言的那些事</title>
+      <link href="/2023/02/09/c1/"/>
+      <url>/2023/02/09/c1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="在学习C语言所遇到的有趣的事情"><a href="#在学习C语言所遇到的有趣的事情" class="headerlink" title="在学习C语言所遇到的有趣的事情"></a>在学习C语言所遇到的有趣的事情</h2><h3 id="1-近视眼的程序员"><a href="#1-近视眼的程序员" class="headerlink" title="1.近视眼的程序员"></a>1.近视眼的程序员</h3><p>有这么一个故事在一家公司中有一个程序员他在编写代码的过程中代码活了过来，其中有一个叫做<code>mian</code>的代码问程序员我是谁？<br>程序员自信的说简单你不是主函数吗所有代码的入口<br>mian又说你在仔细看看。程序员心中纳闷这不就是主函数吗之后戴上旁边的眼睛看了一眼惊呼<em>WC</em>你谁我的main函数呢<strong>注（main又叫主函数是所有程序的入口)</strong><br>在第一次编写程序的时候每个人肯定都犯过看错或者打错字母符号但是自己看不出来一运行就到处报红</p><pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span><span class="token keyword">int</span> <span class="token function">mian</span><span class="token punctuation">(</span>viod<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"hello word"</span><span class="token punctuation">)</span>；    retrun <span class="token number">0</span><span class="token punctuation">;</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><p>相比各位已经很熟这位老朋友了但是你可以看出这位老朋友的身上有几处错误吗？<br>我来揭晓答案吧总共三处错误<br>1.第二行的<code>main</code>函数错了我把它的<code>i</code>和<code>a</code>调换了位置变成了<code>mian</code><br>2.（）中的<code>void</code>我把它拼成了viod。<br>3.第四行的分号我用的是汉语分号。我相信各位聪明的读者早已经看出来错误了但是即使看出了错误和不会在犯这个错误是两码事我依然可以看到有许多的新手会犯这个错误而且这种错误排查起来往往很麻烦需要耗费很多没必要的精力，想要解决的话只能多练多记多打多注意自己打出来的和自己想出来的是不是一致。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> C语言 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客出现错误的一些解决方法</title>
+      <link href="/2023/02/06/wrong/"/>
+      <url>/2023/02/06/wrong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这是整理如果博客出现错误而解决的一些方法"><a href="#这是整理如果博客出现错误而解决的一些方法" class="headerlink" title="这是整理如果博客出现错误而解决的一些方法"></a>这是整理如果博客出现错误而解决的一些方法</h2><p>在博客搭建和优化的过程中肯定会有一些错误而这些错误往往很令人头大这是我整理的一些如果出现错误可以参考的解决方法</p><h3 id="1-Hexo插件错误"><a href="#1-Hexo插件错误" class="headerlink" title="1.Hexo插件错误"></a>1.Hexo插件错误</h3><p>hexo插件错误经常是安装了一些还不够成熟完善的插件或者插件与插件冲突而出现的问题可以使用</p><pre><code>npm uninstall 你安装的插件</code></pre><p>这个可以卸载你所安装的插件从而不受其烦恼</p><h3 id="2-图像显示错误"><a href="#2-图像显示错误" class="headerlink" title="2.图像显示错误"></a>2.图像显示错误</h3><p>这种错误导致其出现的范围很大难以排查以下是我所整理的一些排查思路</p><h4 id="1-图像缓存问题"><a href="#1-图像缓存问题" class="headerlink" title="1.图像缓存问题"></a>1.图像缓存问题</h4><p>这个问题很令人无语因为浏览器会在你浏览的网页中存储一些缓存从而加快打开速度但是同时会影响图像显示不出来或者不对的问题</p><p>解决方法:</p><p>ctrl+F5清理缓存，或者使用<code>hexo cl</code>重新部署，<code>hexo s</code></p><h3 id="3-Hexo插件不完全"><a href="#3-Hexo插件不完全" class="headerlink" title="3.Hexo插件不完全"></a>3.Hexo插件不完全</h3><p>这种错误往往是因为在开始搭建时遗留下来的问题如果是文章插入图片出现不显示问题可以使用这个插件</p><pre><code>hexo-asset-image-for-hexo5</code></pre><p>这时要在根目录__config.yml中post_asset_folder的选项改为true</p><h3 id="6-hexo上传时出现错误error：spawn-failed的解决方法"><a href="#6-hexo上传时出现错误error：spawn-failed的解决方法" class="headerlink" title="6.hexo上传时出现错误error：spawn failed的解决方法"></a>6.hexo上传时出现错误error：spawn failed的解决方法</h3><p>一般在hexo上传时出现这个错误的时候是因为重复文件上传次数过多你有三种方法可以解决<br><br>一.是我一直在用的方法我在更新网站的时候喜欢备份一份网站源文件防止网站在运行的过程中出现很严重的错误时这样还要进行git回滚这样太麻烦了远不如这样提交一份源文件方便<br><br>二.这是我在网上找到的方法先进入本地目录hexo然后输入以下代码</p><pre class=" language-hexo"><code class="language-hexo">git config --global core.autocrlf false</code></pre><pre><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code></pre><p><br>三.就是很笨的方法了也是最不推荐的方法git回滚（效率实在是太慢了）</p><h3 id="5-使用VScode检查"><a href="#5-使用VScode检查" class="headerlink" title="5.使用VScode检查"></a>5.使用VScode检查</h3><p>这是一个大佬告诉我的在VScode中有一个预览选项可以点击那个查看图片是否有问题如果图片正常显示那么基本可以确定为缓存问题如果不能则可以推理出插件或者路径等问题。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+          <category> 解决方案 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HEXO </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Forza Horizon 4</title>
+      <link href="/2023/02/06/Fh4/"/>
+      <url>/2023/02/06/Fh4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="地平线4（Forza-Horizon-4）"><a href="#地平线4（Forza-Horizon-4）" class="headerlink" title="地平线4（Forza Horizon 4）"></a>地平线4（Forza Horizon 4）</h2><p>地平线4（Forza Horizon 4)是由<strong>Playground Games</strong>工作室制作的游戏，也是我认为在所有赛车游戏中把，游戏性，现实拟真度，所调配到完美的巨作在这里你可以体验英国的著名建筑爱丁堡体验这里建筑物的文化气息还有美不胜收的花海令人感叹，我常常在忙碌了一天后夜里打开游戏吹着窗外的风开着车在“英国”旅行十分惬意。<br>下面是我拍的一些照片<br><img src="/2023/02/06/Fh4/5.png"><br><img src="/2023/02/06/Fh4/4.png"><br><img src="/2023/02/06/Fh4/3.png"><br><img src="/2023/02/06/Fh4/2.png"><br><img src="/2023/02/06/Fh4/1.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+          <category> 游戏 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown文件的基本语法</title>
+      <link href="/2023/02/03/Markdown1/"/>
+      <url>/2023/02/03/Markdown1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Markdown是我开始接触语言到现在所认为最简单的轻量级标记语言了它易读易写的特点可以使我更加专心的记录而不用分心语法的问题。</p><h2 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h2><p>要创建标题，请在单词或短语前面添加井号 (#) 。# 的数量代表了标题的级别。例如，添加三个 # 表示创建一个三级标题 (例如：# Heading)。<br>&#x2F;&#x2F;# Heading(效果如下)</p><h1 id="Heding"><a href="#Heding" class="headerlink" title="Heding"></a>Heding</h1><h2 id="可选语法"><a href="#可选语法" class="headerlink" title="可选语法"></a>可选语法</h2><p>还可以在文本下方添加任意数量的 &#x3D;&#x3D; 号来标识一级标题，或者 – 号来标识二级标题.</p><h2 id="Markdown-段落"><a href="#Markdown-段落" class="headerlink" title="Markdown 段落"></a>Markdown 段落</h2><p>要创建段落可以使用空格一行或者多行分隔，不建议手动进行空格缩进会出现奇怪的文字结构。</p><h2 id="Markdown-换行语法"><a href="#Markdown-换行语法" class="headerlink" title="Markdown 换行语法"></a>Markdown 换行语法</h2><p>在一行的末尾添加两个或多个空格，然后按回车键,即可创建一个换行(<br>)。</p><h3 id="Line-Break用法的最佳实践"><a href="#Line-Break用法的最佳实践" class="headerlink" title="Line Break用法的最佳实践"></a>Line Break用法的最佳实践</h3><p>几乎每个 Markdown 应用程序都支持两个或多个空格进行换行，称为 结尾空格（trailing whitespace) 的方式，但这是有争议的，因为很难在编辑器中直接看到空格，并且很多人在每个句子后面都会有意或无意地添加两个空格。由于这个原因，你可能要使用除结尾空格以外的其它方式来换行。幸运的是，几乎每个 Markdown 应用程序都支持另一种换行方式：HTML 的<code>&lt;br&gt;</code> 标签<br>为了兼容性，请在行尾添加“结尾空格”或 HTML 的 <code>&lt;br&gt;</code> 标签来实现换行。</p><h2 id="Mardown强调语法"><a href="#Mardown强调语法" class="headerlink" title="Mardown强调语法"></a>Mardown强调语法</h2><p>通过将文本设置为粗体或斜体来强调其<strong>重要性</strong></p><h3 id="粗体-Bold"><a href="#粗体-Bold" class="headerlink" title="粗体(Bold)"></a>粗体(Bold)</h3><p>将文本变粗可以在变粗的单词或者短语前后各添加两个星号如下<br><code>**Bold**</code><br>效果<strong>Bold</strong><br>还可以添加下划线<br><code>__bold__</code><br>效果 <strong>bold</strong><br>Markdown 应用程序在如何处理单词或短语中间的下划线上并不一致。为兼容考虑，在单词或短语中间部分加粗的话，请使用星号（asterisks）。</p><h3 id="斜体（Italic）"><a href="#斜体（Italic）" class="headerlink" title="斜体（Italic）"></a>斜体（Italic）</h3><p>要使用斜体文本，可以在单词或者短语前后各添加一个星号与下划线具体使用方法与粗体类似<br><code>*ltalic*</code><br><em>ltalic</em><br>突出某个单词或字母可以如下,中间不要带空格。<br><code>*wh*at</code><br><em>wh</em>at</p><h3 id="同时使用粗体和斜体"><a href="#同时使用粗体和斜体" class="headerlink" title="同时使用粗体和斜体"></a>同时使用粗体和斜体</h3><p>想要同时用粗体和斜体突出显示文本，请在单词或短语的前后各添加三个星号或下划线。要加粗并用斜体显示单词或短语的中间部分，请在要突出显示的部分前后各添加三个星号，中间不要带空格。<br><code>Where do you want to ***eat*** today</code><br>Where do you want to <em><strong>eat</strong></em> today</p><h2 id="Markdown-引用语法"><a href="#Markdown-引用语法" class="headerlink" title="Markdown 引用语法"></a>Markdown 引用语法</h2><p>要创建块引用，请在段落前添加一个 &gt; 符号。</p><pre><code>&gt;Dorothy followed her through many of the   beautiful rooms in her castle.</code></pre><p>渲染效果如下所示</p><blockquote><p>Dorothy followed her through many of the   beautiful rooms in her castle</p></blockquote><h3 id="多个段落的块引用"><a href="#多个段落的块引用" class="headerlink" title="多个段落的块引用"></a>多个段落的块引用</h3><p>块引用可以包含多个段落。为段落之间的空白行添加一个 &gt; 符号。</p><pre><code>&gt; Dorothy followed her through many of the beautiful rooms in her castle.&gt;&gt; The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.</code></pre><p>显示为</p><blockquote><p>Dorothy followed her through many of the beautiful rooms in her castle.</p><p>The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.<br>如果想要嵌套引用可以在加一个&gt;</p></blockquote><pre><code>&gt;我很好&gt;&gt;你还好吗</code></pre><blockquote><p>我很好</p><blockquote><p>你还好吗</p></blockquote></blockquote><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>有些时候我们不得不需要排序列表要创建有序列表，请在每个列表项前添加数字并紧跟一个英文句点。数字不必按数学顺序排列，但是列表应当以数字 1 起始。</p><pre><code>1. one2. two3. three4. four</code></pre><ol><li>one</li><li>two</li><li>three</li><li>four</li></ol><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>要创建无序列表，请在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+) 。缩进一个或多个列表项可创建嵌套列表。</p><hr><p>如实在忘记了怎么使用可以参考以下文章</p><blockquote><p><em><strong><a href="https://markdown.com.cn/basic-syntax/">快点击我</a></strong></em></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+          <category> 语法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于冷水澡</title>
+      <link href="/2023/02/02/shenghuo/"/>
+      <url>/2023/02/02/shenghuo/</url>
+      
+        <content type="html"><![CDATA[<p> 冷水澡是指在没有加热的情况下，用凉水洗澡的一种方式。冷水澡可以带来许多好处，例如刺激血液循环，加速新陈代谢，提高免疫力，减少皮肤问题，改善睡眠质量等等。此外，因为冷水澡可刺激神经系统，提高警觉和注意力，因此适用于需要集中精力的人士，如运动员、学生、创业者等等。然而，冷水澡不适用于心脏病、高血压等疾病患者，特别是在夏季炎热的天气里更应该小心。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 常识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>CSGO的一些命令</title>
+      <link href="/2023/01/20/csgomingling/"/>
+      <url>/2023/01/20/csgomingling/</url>
+      
+        <content type="html"><![CDATA[<p>CSGO的一些比较实用的道具</p><pre><code>sv_cheats 1;bot_kick;sv_infinite_ammo 1;mp_startmoney 16000;mp_roundtime_defuse 60;bind &quot;x&quot;&quot;sv_rethrow_last_grenade&quot;;mp_freezetime 0;mp_restartgame 1;mp_buy_anywhere 1;mp_buytime 9999;sv_grenade_trajectory 1;bind &quot;c&quot; &quot;noclip&quot;;noclip</code></pre><p>这是机器人房间训练道具命令</p><pre><code>sv_rethrow_last_grenade</code></pre><p>这是重现上一个使用过的投掷物（练习闪光必备）</p><pre><code>quit</code></pre><p>(这个我想不用多说了吧）<br>后续命令看心情补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 游戏 </category>
+          
+          <category> 道具 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于摄影</title>
+      <link href="/2022/12/17/sheying/"/>
+      <url>/2022/12/17/sheying/</url>
+      
+        <content type="html"><![CDATA[<p>关于我为什么会喜欢摄影其实很简单因为开心所以喜欢，摄影可以拍任何东西孩童的笑，动物的天真，大自然鬼斧神工般的壮丽景色无一不是我喜欢摄影的因素我想把这些记录下来每当内心感觉焦虑的时候拿出来看看就会好很多，因为喜欢摄影所以为了拍更多好看的照片我也会去许多地方，峨眉山的壮丽，花果山的生机勃勃，万仙山的险，海边的天空一望无际的碧蓝，草原的马儿飞驰绵羊慢慢悠悠的吃着嫩草，虽然在路上会有许许多多的困难但是每当看见这些景色我都觉的，值了！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 摄影 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
