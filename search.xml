@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>自我完善总结计划</title>
-      <link href="/2023/07/17/zongjie/"/>
-      <url>/2023/07/17/zongjie/</url>
-      
-        <content type="html"><![CDATA[<p>现在开始一个总结计划每一个月都会汇报一下我这个月的综合情况从，运动，学习，心情目前三个方面来汇报</p><h2 id="更新时间为每个月30号"><a href="#更新时间为每个月30号" class="headerlink" title="更新时间为每个月30号"></a><em><strong>更新时间为每个月30号</strong></em></h2><blockquote><p>7月 Python的学习进度有些缓慢需要加急进度，开始学习英语单词，准备开启早晨骑行计划改善体脂，心情平缓。</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> 自律 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Python笔记·陆</title>
       <link href="/2023/07/04/py5/"/>
       <url>/2023/07/04/py5/</url>
@@ -488,7 +469,7 @@
       <link href="/2023/02/25/py1/"/>
       <url>/2023/02/25/py1/</url>
       
-        <content type="html"><![CDATA[<hr><h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><br><img src="/2023/02/25/py1/1.png"></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p><h2 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h2><p>randint函数<br>用法</p><pre class=" language-Python"><code class="language-Python">random.randint(1,10)//含义随机在1—10中选择数字</code></pre><h2 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h2><p>import 引用模块<br>语法</p><pre class=" language-Python"><code class="language-Python">import + 模块名称</code></pre><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h3 id="语句用法"><a href="#语句用法" class="headerlink" title="语句用法"></a>语句用法</h3><p>目标当变量A大于10时输出你好反之输出你好我们不熟</p><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)if A >= 10:    print("你好")else:    print("你好我们不熟")</code></pre><h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><p>在python中有一个比较奇特的写法三元表达式<br>语法</p><pre class=" language-Python"><code class="language-Python">变量 = 值1 if 条件 else 值2</code></pre><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)print("你好") if A >= 10 else print("你好我们不熟")</code></pre><p>在比较复杂的循环结构中我更推荐前者这样更直观更容易修改</p>]]></content>
+        <content type="html"><![CDATA[<hr><h2 id="input函数"><a href="#input函数" class="headerlink" title="input函数"></a>input函数</h2><p>input 函数是用于接收用户输入并且返回值的函数具体用法与C语言的scanf函数类似。</p><h2 id="int-函数"><a href="#int-函数" class="headerlink" title="int()函数"></a>int()函数</h2><p>由于input返回的值是 <em><strong>字符串类型(String类)</strong></em> 所以想要转换成整型可以使用int()函数,函数演示如下。<br><br><img src="/2023/02/25/py1/1.png"></p><h2 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h2><p>break语句可以跳出循环体。</p><h2 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h2><p>randint函数<br>用法</p><pre class=" language-Python"><code class="language-Python">random.randint(1,10)//含义随机在1到10中选择数字</code></pre><h2 id="import-函数"><a href="#import-函数" class="headerlink" title="import 函数"></a>import 函数</h2><p>import 引用模块<br>语法</p><pre class=" language-Python"><code class="language-Python">import + 模块名称</code></pre><h2 id="if循环语句"><a href="#if循环语句" class="headerlink" title="if循环语句"></a>if循环语句</h2><p>if循环的嵌套一个完整的if循环结构嵌套另一个完整的if循环即if循环的嵌套。 <strong>（注意！！！python是依靠缩进判断if优先级的）</strong></p><h3 id="语句用法"><a href="#语句用法" class="headerlink" title="语句用法"></a>语句用法</h3><p>目标当变量A大于10时输出你好反之输出你好我们不熟</p><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)if A >= 10:    print("你好")else:    print("你好我们不熟")</code></pre><h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><p>在python中有一个比较奇特的写法三元表达式<br>语法</p><pre class=" language-Python"><code class="language-Python">变量 = 值1 if 条件 else 值2</code></pre><pre class=" language-Python"><code class="language-Python">A = input("请输入一个数字")A = int(A)print("你好") if A >= 10 else print("你好我们不熟")</code></pre><p>在比较复杂的循环结构中我更推荐前者这样更直观更容易修改</p>]]></content>
       
       
       <categories>
